@@ -1,0 +1,232 @@
+body.cms #content h1 {
+	margin-left:0;
+}
+body.cms #content h2, body.forms #content h2 {
+	xmargin:10px 0;
+}
+body.cms #content .free-text p {
+	text-align:justify;
+}
+body.cms #content .free-text img {
+	float:right;
+	padding:5px;
+	margin:0 0 15px 15px;
+}
+body.cms #content .free-text hr {
+	background:#999;
+	height:1px;
+	border:none;
+	margin:20px 0px;	
+}
+body.cms #content .free-text h1, body.cms #content .free-text h2, body.cms #content .free-text h3 {
+	padding-bottom:10px;
+}
+
+/*company profile*/
+
+/*calculator*/
+body.calculator #content h2 {
+	font-size:14px;
+	color:#fff;
+	padding-bottom:14px;
+}
+body.calculator #content .tab-container {
+	margin:0;
+}
+body.calculator #content .tab-container .tab-content {
+	background:#eef0f5;
+	width:545px;
+	padding:20px;
+}
+body.calculator #content .tab-container .tab-content p {
+	border-bottom:1px dotted #9097a9;
+	padding-bottom:8px;
+}
+body.calculator #content .tab-container .tab-content p.submit {
+	border:none;
+	text-align:center;
+}
+body.calculator #content .tab-container .tab-content p input[type="text"] {
+	width:23.5%;
+	padding:0 5px;
+	text-align:right;
+}
+body.calculator #content .tab-container .tab-content .result {
+	background: -webkit-gradient(linear, left top, left bottom, from(#343d56), to(#0f131f)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #343d56,  #0f131f); /* for firefox 3.6+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#343d56', endColorstr='#0f131f'); /* for IE */
+	color:#fff;
+	padding:22px 22px 12px 22px;
+	margin-top:20px;
+	display:none;
+}
+body.calculator #content .tab-container .tab-content .result input {
+	border:none;
+	background:none;
+	color:#fff;
+}
+body.calculator #content .tab-container .tab-content .result table {
+	width:100%;
+}
+body.calculator #content .tab-container .tab-content .result table tr+tr {
+	border-top:1px dotted #9097a9;
+}
+body.calculator #content .tab-container .tab-content .result table tr td {
+	padding:7px 0 10px 0;
+}
+body.calculator .tab-container .tab-content form label {
+	display:inline-block;
+	width:399px;
+}
+body.calculator #content .tab-container .tab-content.mortgage {
+	xwidth:540px;
+	margin:0;
+}
+body.calculator #content .tab-container .tab-content.mortgage .result input {
+	text-align:right;
+}
+body.calculator #content .tab-container .tab-content.mortgage .result table tr td:first-child {
+	width:400px;
+}
+body.calculator #content .tab-container .tab-content.mortgage .result table tr td+td {
+	text-align:right;
+}
+body.calculator #content .tab-container .tab-content.stamp-duty {
+	xwidth:640px;
+	margin:0;
+}
+body.calculator #content .tab-container .clearform_btn.button {
+	width:96px;
+}
+body.calculator .tab-container .tab-content.stamp-duty .result input {
+	text-align:center;
+}
+
+/*testimonials*/
+body.testimonials #content .listing-nav-ordering .found {
+	float:left;
+	height:20px;
+	margin-top:5px;
+	width:440px;
+	overflow:hidden;
+}
+body.testimonials #content .listing-nav-ordering {
+	margin:0;
+	height:23px; /*for ie*/
+}
+body.testimonials #content .listing-nav-ordering.bottom {
+	padding-top:12px;
+}
+body.testimonials #content .listing-nav-ordering a {
+	font-weight:bold;
+	display:inline-block;
+	border:1px solid #999;
+	padding:4px 5px;
+	margin-right:4px;
+}
+body.testimonials #content .listing-nav-ordering .page-numbers {
+	text-align:right;
+	overflow:hidden;
+}
+body.testimonials #content .listing-nav-ordering .page-numbers strong, body.testimonials #content .listing-nav-ordering .page-numbers a:hover {
+	display:inline-block;
+	border:1px solid #019aa6;
+	padding:4px 5px;
+	margin-right:4px; 
+	background: #019aa6;
+	color:#FFF;
+}
+body.testimonials .testimonial {
+	border-bottom:1px solid #d6d6d6;
+	margin:14px 0 0 0;
+	overflow:hidden;
+}
+body.testimonials .testimonial.odd {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffeff', endColorstr='#e7e7e8'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#fffeff), to(#e7e7e8)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #fffeff,  #e7e7e8); /* for firefox 3.6+ */
+}
+body.testimonials .testimonial .testi-img {
+	float:left;
+	margin:0 15px 5px 0;
+	height:160px;
+	padding:5px;
+}
+body.testimonials .testimonial .testi-img img {
+	margin:0;
+	padding:0;
+}
+body.testimonials .testimonial .testi-img p {
+	padding-top:12px;
+	font-weight:bold;
+	text-align:center;
+}
+body.testimonials .testimonial .testi-content {
+	padding:0 12px 10px 0;
+	margin-left:265px;
+}
+body.testimonials .testimonial .testi-content.no-img {
+	margin-left:0;
+}
+
+/*news*/
+body.cms #main #content  ul#item-list{
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
+body.cms #main #content  ul#item-list li {
+	margin-bottom:10px;
+}
+
+/*suburb profiles*/
+body.suburb-profiles #content h2 {
+	color:#fff;
+	margin: 4px 0 12px 0;
+    padding: 10px 0 11px 8px;
+	clear:both;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e2e2e', endColorstr='#6a6a6a'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#2e2e2e), to(#6a6a6a)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #2e2e2e,  #6a6a6a); /* for firefox 3.6+ */
+}
+body.suburb-profiles #content #select-suburb {
+	float:right;
+}
+body.suburb-profiles #content #select-suburb select {
+	min-width:120px;
+}
+/*tenancy application*/
+body.cms #tenancy_steps_list {
+	padding:0;
+	line-height:16px;
+	margin-bottom:30px;
+}
+body.cms #tenancy_steps_list dt {
+	float:left;
+	font-weight:bold;
+	margin-bottom:5px;
+	text-transform:uppercase;
+	width:70px;
+}
+body.cms #tenancy_steps_list dd {
+	margin:0 0 15px 70px;
+}
+body.cms #tenancy_steps_list dd  img{
+	vertical-align:bottom;
+	margin:0 !important;
+	padding:0 !important;
+	float:none !important;
+	background:none !important;
+}
+/*sitemap*/
+body.cms #sitemap li {
+	line-height:normal;
+}
+/*unsubscribe*/
+body.cms .subscription li a+span {
+	font-size:10px;
+	visibility:hidden;
+}
+body.cms .subscription li a:hover+span {
+	visibility:visible;
+}

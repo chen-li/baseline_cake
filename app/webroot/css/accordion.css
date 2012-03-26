@@ -1,0 +1,33 @@
+#accordion_box {
+	overflow:hidden;
+}
+#accordion_box ul{
+	height:324px;
+	background:#f0f0f0;
+}
+#accordion_box ul li{
+	display:block;
+	float:left;
+	position:relative;
+	overflow:hidden;
+	width:32px;
+	cursor:pointer;
+}
+#accordion_box ul li.active{
+	xwidth:602px;
+	cursor:default;
+}
+#accordion_box ul li img.loading{
+	margin-top:120px;
+}
+#accordion_box ul li p{
+	color:#fff;
+	position:absolute;
+	bottom:10px;
+	right:0;
+	padding:10px;
+	border:2px solid #fff;
+	border-right:none;
+	width:480px;
+	background:url(../img/desc_bg.png) repeat;
+}

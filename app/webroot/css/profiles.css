@@ -1,0 +1,467 @@
+body.profiles #content #links {
+	height:27px;
+	border-top:1px solid #999;
+	border-bottom:1px solid #999;
+	padding-top:14px;
+}
+body.profiles #content #links #vcard {
+	float:right;
+}
+body.profiles #content #staff {
+	margin:30px 0 28px 0;
+}
+body.profiles #content #staff #staff-photo {
+	float:left;
+	width:264px;
+	margin-right:30px;
+	padding:5px;
+}
+body.profiles #content #staff #staff-info {
+	float:left;
+	width:630px;
+}
+body.profiles #content #staff #staff-info h1 {
+	font-size:16px;
+	padding-bottom:22px;
+}
+body.profiles #content #staff #staff-info p {
+	font-size:14px;
+	margin-bottom:16px;
+}
+body.profiles #content #staff #staff-info a {
+	text-transform:lowercase;
+}
+body.profiles #content #staff #staff-info #staff-bio p {
+	font-size:13px;
+	text-align:justify;
+}
+body.profiles #content #staff #staff-info #title {
+	margin-bottom:2px;
+}
+body.profiles #content #staff #staff-info #phone {
+	margin-bottom:2px;
+}
+body.profiles #content #staff #staff-info #email {
+	margin-bottom:24px;
+}
+body.profiles #content #display {
+	height:39px;
+}
+body.profiles #content #display li {
+	float:left;
+	margin-right:5px;
+}
+body.profiles #content #display li a {
+	display:block;
+	font-weight:bold;
+	text-transform:uppercase;
+	padding:12px 13px 13px 13px;
+	border:1px solid #666;
+	border-bottom:none;
+	color:#666;
+}
+body.profiles #content #display li a.active {
+	border:1px solid #e31837;
+	border-bottom:none;
+	color:#fff;
+}
+body.profiles #content #display li a:hover {
+	text-decoration:none;
+}
+body.profiles #content .tab-content {
+	padding-top:10px;
+	min-height:200px;
+}
+body.profiles #content .tab-content p.loading {
+	text-align:center;
+}
+
+/*status tags*/
+body.profiles #content .listview>ul>li .photo .status {
+	position:absolute;
+	right:5px;
+	top:5px;
+	width:67px;
+	height:67px;
+	overflow:hidden;
+}
+
+/*current listings*/
+body.profiles #content #listings {
+
+}
+body.profiles #content #listings .listing-nav-ordering {
+	border-bottom:1px solid #999;
+	margin:0;
+	padding:0 0 9px 0;
+	height:23px; /*for ie*/
+}
+body.profiles #content #listings .listing-nav-ordering.bottom {
+	padding:9px 0;
+	border:none;
+}
+body.profiles #content #listings .listing-nav-ordering a {
+	color:#333;
+}
+body.profiles #content #listings .listing-nav-ordering .found {
+	float:left;
+	height:20px;
+	margin-top:5px;
+	width:260px;
+	overflow:hidden;
+}
+body.profiles #content #listings .listing-nav-ordering .page-numbers {
+	width:auto;
+	text-align:right;
+	overflow:hidden;
+}
+body.profiles #content #listings .listing-nav-ordering .page-numbers a {
+	font-weight:bold;
+	display:inline-block;
+	border:1px solid #999;
+	padding:4px 5px;
+	margin-right:4px;
+}
+body.profiles #content #listings .listing-nav-ordering .page-numbers a:hover {
+	text-decoration:none;
+}
+body.profiles #content #listings .listing-nav-ordering .page-numbers strong, body.profiles #content #listings .listing-nav-ordering .page-numbers a:hover {
+	display:inline-block;
+	border:1px solid #019aa6;
+	padding:4px 5px;
+	margin-right:4px; 
+	background: #019aa6;
+	color:#FFF;
+}
+body.profiles #content #listings .listview>ul>li {
+	height:150px;
+	padding:19px 0 17px 0;
+	border-bottom:1px solid #999;
+	overflow:hidden;
+}
+body.profiles #content #listings .listview>ul>li.list-odd {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#E7E7E8'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#E7E7E8)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #ffffff,  #E7E7E8); /* for firefox 3.6+ */
+}
+body.profiles #content #listings .listview>ul>li .photo {
+	float:left;
+	margin-right:28px;
+	padding:5px;
+	position:relative;
+}
+body.profiles #content #listings .listview>ul>li .photo a>img {
+	max-height:138px;
+	width:205px;
+}
+body.profiles #content #listings .listview>ul>li .info {
+	height:150px;
+	overflow:hidden;
+}
+body.profiles #content #listings .listview>ul>li .info .basic {
+	float:left;
+	height:150px;
+	width:480px;
+	border-right:1px solid #999;
+	padding-right:5px;
+	margin-right:10px;
+}
+body.profiles #content #listings .listview>ul>li .info .basic .address {
+	margin-bottom:3px;
+	font-weight:bold;
+}
+body.profiles #content #listings .listview>ul>li .info .basic .price {
+	margin-bottom:4px;
+}
+body.profiles #content #listings .listview>ul>li .info .basic .headline {
+	font-weight:bold;
+}
+body.profiles #content #listings .listview>ul>li .info .basic .desc {
+	margin-bottom:7px;
+}
+body.profiles #content #listings .listview>ul>li .info .basic .address span {
+	padding-right:8px;
+}
+body.profiles #content #listings .listview>ul>li .info .tools {
+	
+}
+body.profiles #content #listings .listview>ul>li .info .tools .bbc {
+	padding-top:5px;
+}
+body.profiles #content #listings .listview>ul>li .info .tools ul {
+	padding-top:70px;
+}
+body.profiles #content #listings .listview>ul>li .info .tools ul li {
+	height:32px;
+}
+
+/*recent sales (same as current listings)*/
+body.profiles #content #recent .listing-nav-ordering {
+	border-bottom:1px solid #999;
+	margin:0;
+	padding:0 0 9px 0;
+	height:23px; /*for ie*/
+}
+body.profiles #content #recent .listing-nav-ordering.bottom {
+	padding:9px 0;
+	border:none;
+}
+body.profiles #content #recent .listing-nav-ordering a {
+	color:#333;
+}
+body.profiles #content #recent .listing-nav-ordering .found {
+	float:left;
+	height:20px;
+	margin-top:5px;
+	width:260px;
+	overflow:hidden;
+}
+body.profiles #content #recent .listing-nav-ordering .page-numbers {
+	width:auto;
+	text-align:right;
+	overflow:hidden;
+}
+body.profiles #content #recent .listing-nav-ordering .page-numbers a {
+	font-weight:bold;
+	display:inline-block;
+	border:1px solid #999;
+	padding:4px 5px;
+	margin-right:4px;
+}
+body.profiles #content #recent .listing-nav-ordering .page-numbers a:hover {
+	text-decoration:none;
+}
+body.profiles #content #recent .listing-nav-ordering .page-numbers strong, body.profiles #content #recent .listing-nav-ordering .page-numbers a:hover {
+	display:inline-block;
+	border:1px solid #019aa6;
+	padding:4px 5px;
+	margin-right:4px; 
+	background: #019aa6;
+	color:#FFF;
+}
+body.profiles #content #recent .listview>ul>li {
+	height:150px;
+	padding:19px 0 17px 0;
+	border-bottom:1px solid #999;
+	overflow:hidden;
+}
+body.profiles #content #recent .listview>ul>li.list-odd {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#E7E7E8'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#E7E7E8)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #ffffff,  #E7E7E8); /* for firefox 3.6+ */
+}
+body.profiles #content #recent .listview>ul>li .photo {
+	float:left;
+	margin-right:28px;
+	padding:5px;
+	position:relative;
+}
+body.profiles #content #recent .listview>ul>li .photo a>img {
+	max-height:138px;
+	width:205px;
+}
+body.profiles #content #recent .listview>ul>li .info {
+	height:150px;
+	overflow:hidden;
+}
+body.profiles #content #recent .listview>ul>li .info .basic {
+	float:left;
+	height:150px;
+	width:480px;
+	border-right:1px solid #999;
+	padding-right:5px;
+	margin-right:10px;
+}
+body.profiles #content #recent .listview>ul>li .info .basic .address {
+	margin-bottom:3px;
+	font-weight:bold;
+}
+body.profiles #content #recent .listview>ul>li .info .basic .price {
+	margin-bottom:4px;
+}
+body.profiles #content #recent .listview>ul>li .info .basic .headline {
+	font-weight:bold;
+}
+body.profiles #content #recent .listview>ul>li .info .basic .desc {
+	margin-bottom:7px;
+}
+body.profiles #content #recent .listview>ul>li .info .basic .address span {
+	padding-right:8px;
+}
+body.profiles #content #recent .listview>ul>li .info .tools {
+	
+}
+body.profiles #content #recent .listview>ul>li .info .tools .bbc {
+	padding-top:5px;
+}
+body.profiles #content #recent .listview>ul>li .info .tools ul {
+	padding-top:70px;
+}
+body.profiles #content #recent .listview>ul>li .info .tools ul li {
+	height:32px;
+}
+/*open homes*/
+body.profiles #content #open {
+}
+body.profiles #content #open h2 {
+	color:#fff;
+	clear:both;
+	margin: 0 0 12px 0;
+    padding: 10px 0 11px 8px;
+	xbackground:#9097a9;
+	background: -webkit-gradient(linear, left top, left bottom, from(#2e2e2e), to(#6a6a6a)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #2e2e2e,  #6a6a6a); /* for firefox 3.6+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e2e2e', endColorstr='#6a6a6a'); /* for IE */
+}
+body.profiles #content #open p.print {
+	float:right;
+}
+body.profiles #content #open p.sort-by a {
+	color:#666;
+}
+body.profiles #content #open p.sort-by a.active {
+	color:#2FA694;
+	cursor:default;
+}
+body.profiles #content #open p.sort-by a.active:hover {
+	text-decoration:none;
+}
+body.profiles #content #open p.sort-by select {
+	width:150px;
+}
+body.profiles #content #open>ul {
+	border: 1px solid #999;
+	border-top:none;
+	margin-bottom:25px;
+}
+body.profiles #content #open>ul>li {
+	padding:10px;
+}
+body.profiles #content #open>ul>li+li {
+	border-top:1px solid #999;
+}
+body.profiles #content #open>ul>li.title {
+	padding:0;
+	border:none;
+}
+body.profiles #content #open>ul>li.title+li {
+	border:none;
+}
+body.profiles #content #open ul li .photo {
+	float:left;
+	width:147px;
+	height:98px;
+	margin:0 30px 0 0;
+	padding:5px;
+}
+body.profiles #content #open ul li .photo img {
+	max-width:148px;
+	height:98px;	
+}
+body.profiles #content #open ul li .info {
+	height:112px;
+	overflow:hidden;
+}
+body.profiles #content #open ul li .info dl {
+	line-height:16px;
+}
+body.profiles #content #open ul li .info dl dt {
+	float:left;
+	width:80px;
+	font-weight:bold;
+}
+body.profiles #content #open ul li .info dl dd {
+	margin:0 0 5px 80px;
+}
+body.profiles #content #open ul li .info .basic {
+	border-right:1px solid #999;
+	float:left;
+	height:112px;
+	margin-right:10px;
+	padding-right:10px;
+	width:420px;
+}
+body.profiles #content #open ul li .info .basic .time {
+	float:left;
+	width:140px;
+	height:100px;
+}
+body.profiles #content #open ul li .info .tools {
+	margin-left:440px;
+}
+body.profiles #content #open ul li .info .tools ul {
+	margin-top:0;
+}
+body.profiles #content #open ul li .info .tools dl {
+	height:60px;
+}
+
+/*testimonials*/
+body.profiles #content #testimonials {
+}
+body.profiles #content #testimonials .listing-nav-ordering .found {
+	float:left;
+	height:20px;
+	margin-top:5px;
+	width:440px;
+	overflow:hidden;
+}
+body.profiles #content #testimonials .listing-nav-ordering {
+	margin:0;
+	height:23px; /*for ie*/
+}
+body.profiles #content #testimonials .listing-nav-ordering.bottom {
+	padding-top:12px;
+}
+body.profiles #content #testimonials .listing-nav-ordering a {
+	color:#333;
+}
+body.profiles #content #testimonials .listing-nav-ordering .page-numbers {
+	text-align:right;
+	overflow:hidden;
+}
+body.profiles #content #testimonials .listing-nav-ordering .page-numbers strong, body.profiles #content #testimonials .listing-nav-ordering .page-numbers a {
+	font-weight:bold;
+	display:inline-block;
+	border:1px solid #999;
+	padding:4px 5px;
+	margin-left:4px;
+}
+body.profiles #content #testimonials .listing-nav-ordering .page-numbers strong, body.profiles #content #testimonials .listing-nav-ordering .page-numbers a:hover {
+	border:1px solid #019aa6;
+	background: #019aa6;
+	color:#FFF;
+	text-decoration:none;
+}
+body.profiles #content #testimonials .testimonial {
+	border-bottom:1px solid #d6d6d6;
+	margin:14px 0 0 0;
+	overflow:hidden;
+}
+body.profiles #content #testimonials .testimonial.odd {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffeff', endColorstr='#e7e7e8'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#fffeff), to(#e7e7e8)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #fffeff,  #e7e7e8); /* for firefox 3.6+ */
+}
+body.profiles #content #testimonials .testimonial .testi-img {
+	float:left;
+	margin:0 15px 5px 0;
+	height:160px;
+	padding:5px;
+}
+body.profiles #content #testimonials .testimonial .testi-img img {
+	margin:0;
+	padding:0;
+}
+body.profiles #content #testimonials .testimonial .testi-img p {
+	padding-top:12px;
+	font-weight:bold;
+	text-align:center;
+}
+body.profiles #content #testimonials .testimonial .testi-content {
+	padding:0 12px 10px 0;
+	margin-left:265px;
+}
+body.profiles #content #testimonials .testimonial .testi-content.no-img {
+	margin-left:0;
+}

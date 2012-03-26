@@ -1,0 +1,276 @@
+/*** Details Page ***/
+body.details #content h1 {
+	text-transform:none;
+}
+body.details #content .tools {
+	border:1px solid #999;
+	border-left:none;
+	border-right:none;
+	padding-top:8px;
+	min-height:25px;
+	margin-bottom:15px;
+}
+body.details #content .tools a {
+
+}
+body.details #content .tools .back {
+}
+body.details #content .tools ul.links {
+	float:right;
+	min-height:20px;
+	max-width:800px;
+	xoverflow:hidden;
+}
+body.details #content .tools ul.links li {
+	float:left;
+	line-height:16px;
+	height:20px;
+	margin:0 2px 0 12px;
+	white-space:nowrap; /*for ie7*/
+}
+body.details #content .tools ul.links li a {
+}
+body.details #content #left {
+}
+body.details #content .bbc {
+	font-size:20px;
+	font-weight:bold;
+	float:right;
+	padding-top:2px;
+}
+body.details #content .bbc img {
+	vertical-align:bottom;
+}
+body.details #content #left .ad-gallery {
+	margin-bottom:20px;
+	position: relative;
+	padding:5px;
+	width:402px;
+}
+body.details #content #left .ad-gallery .status {
+	position:absolute;
+	right: 5px;
+    top: 5px;
+	z-index:10;
+}
+body.details #content #left #agent-contact h2 {
+	color:#fff;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e2e2e', endColorstr='#6a6a6a'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#2e2e2e), to(#6a6a6a)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #2e2e2e,  #6a6a6a); /* for firefox 3.6+ */
+	margin: 4px 0 12px 0;
+    padding: 10px 0 11px 8px;
+}
+body.details #content #left #agent-contact #office {
+	padding:0 10px;
+}
+body.details #content #left #agent-contact #office p {
+	float:left;
+	width:180px;
+}
+body.details #content #left #agent-contact #office p+p {
+	margin-left:15px;
+}
+body.details #content #left #agent-contact #office .clear {
+	clear:left;
+}
+body.details #content #left #agent-contact {
+	width:402px;
+	padding:5px;
+}
+body.details #content #left #agent-contact ul {
+	padding:0 10px;
+}
+body.details #content #left #agent-contact .agent {
+	height:110px;
+	padding-bottom:23px;
+	margin-bottom:16px;
+	border-bottom:1px solid #ccc;
+}
+body.details #content #left #agent-contact .agent .agent-photo {
+	float:left;
+	width:75px;
+	margin-right:25px;
+	padding:5px;
+}
+body.details #content #left #agent-contact .agent .agent-info {
+	float:left;
+	padding-top:11px;
+	width:270px;
+}
+body.details #content #left #agent-contact .agent .agent-info p.phone {
+	padding-top:6px;
+	height:31px;
+}
+body.details #content #left #agent-contact form {
+	padding:0 10px;
+}
+body.details #content #left #agent-contact form label {
+	display:inline-block;
+	width:116px;
+	vertical-align: top;
+	font-weight:bold;
+}
+body.details #content #left #agent-contact form p>span {
+	float: right;
+	padding: 5px 0 0 0;
+}
+body.details #content #left #agent-contact form input[type="text"] {
+	width:67.5%;
+}
+body.details #content #left #agent-contact form textarea {
+	width:67.5%;
+	height:108px;
+}
+body.details #content #left #agent-contact form .security label {
+	display:block;
+	float:left;
+	margin-right:3px;
+}
+body.details #content #left #agent-contact form .security table {
+	width:180px;
+	height:45px;
+	xborder:5px solid #fff;
+	margin-bottom: 15px;
+	background:#fff;
+}
+body.details #content #left #agent-contact form span.icon.question {
+	float:none;
+	display:inline-block;
+	vertical-align: bottom;
+}
+body.details #content #left #agent-contact form .tooltip {
+	display:none;
+	background:transparent url(../img/black_arrow.png);
+	font-size:12px;
+	height:90px;
+	width:160px;
+	padding:15px 25px;
+	color:#fff;	
+}
+body.details #content #left #agent-contact form input[type="text"].short {
+	width:50px;
+}
+body.details #content #right {
+	float:right;
+	width:495px;
+}
+body.details #content #right img {
+	vertical-align:top;
+}
+
+body.details #content #right .back {
+	text-align:right;
+	padding:6px 0 16px 0;
+}
+body.details #content #right #video {
+	width:326px;
+	height:230px;
+	background: url(../img/sample-video.jpg) left top;
+	margin-bottom:20px;
+}
+body.details #content #right .suburb-profile {
+	margin-bottom:20px;
+	font-size:12px;
+}
+body.details #content #right .suburb-profile a {
+	display:block;
+	background:#5a595a;
+	color:#fff;
+	text-align:center;
+	padding:10px 0 11px 0;
+	text-decoration:none;
+}
+body.details #content #right .suburb-profile a:hover {
+	display:block;
+	background:#ccc;
+	color:#fff;
+}
+body.details #content #right .desp {
+	text-align:justify;
+	margin-bottom:30px;
+}
+body.details #content #right #overview {
+	margin-bottom:34px;
+}
+body.details #content #right #overview h2 {
+	border-bottom:1px solid #ccc;
+}
+body.details #content #right #overview dl {
+	padding:9px 0;
+	border-bottom:1px solid #ccc;
+}
+body.details #content #right #overview dl dt {
+	float:left;
+	width:125px;
+}
+body.details #content #right #overview dl dd {
+	padding-left:125px;
+}
+body.details #content #right #overview dl dd+dd {
+	padding-top:5px;
+}
+body.details #content #right #overview dl dd label {
+	display:inline-block;
+	width:100px;
+}
+body.details #content #right #overview dl dd p {
+	margin-bottom:2px;
+}
+body.details #content #right #overview dl.features {
+	padding-bottom:4px;
+}
+body.details #content #right #overview dl.features dd {
+	margin-bottom:5px;
+}
+body.details #content #right #overview dl.times {
+	border-bottom:1px solid #ccc;
+	padding:12px 0 4px 0;
+}
+body.details #content #right #overview dl.times dt, body.details #content #right #overview dl.times dd {
+	float:none;
+	padding:0 0 8px 0;
+}
+body.details #content #right #overview dl.times dt {
+	font-weight:bold;
+	width:auto;
+}
+
+body.details #content .tab-container > ul.tabs li.active a {
+}
+body.details #content .tab-container .tab-content {
+}
+body.details #content .tab-container #google-canvas, body.details #content .tab-container #streetview-canvas, body.details #content .tab-container #walkscore-canvas {
+	height:400px;
+	width:100%;
+	color:#000;
+	xbackground:#fff;
+}
+
+/*project listings*/
+body.details #content .corresponding {
+	margin-bottom:34px;
+}
+body.details #content .corresponding table td, body.details #content .corresponding table th{
+	padding:9px 10px;
+	font-size:13px;
+	float:none;
+	border:1px solid #ccc;
+	border-left:none;
+	border-right:none;
+}
+body.details #content .corresponding table td {
+	font-weight:normal;
+}
+body.details #content .corresponding table td.addr{
+	width:45px;
+}
+body.details #content .corresponding table td.price{
+	width:200px;
+}
+body.details #content .corresponding table td.bbc{
+	width:200px;
+}
+body.details #content .corresponding table td.status{
+	width:50px;
+}

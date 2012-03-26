@@ -1,0 +1,189 @@
+#wrapper {
+}
+body.home #wrap #main #content{
+	xpadding-right:0;
+}
+body.home #main #content #left {
+	float:left;
+	width:634px;
+}
+body.home #main #content #right {
+	margin-left:654px;
+	width:282px;
+}
+body.home #main #content #slideshow-box {
+	height:384px;
+	width:634px;
+	position:relative;
+	z-index:0;
+	margin-bottom:20px;
+	overflow:hidden;
+}
+body.home #main #content #slideshow-box li {
+	text-align:center;
+	height:374px;
+	width:624px;
+	position:absolute;
+	xtop:379px;
+	padding: 5px;
+}
+body.home #main #content #slideshow-box li img.loading {
+	margin-top:170px;
+}
+body.home #main #content #featured-box {
+	position:relative;
+	z-index:0;
+	margin-bottom:20px;
+	height:384px;
+	width:634px;
+}
+body.home #main #content #featured-box #featured-tag {
+	position:absolute;
+	left:5px;
+	top:5px;
+	height:80px;
+	width:78px;
+	z-index:20;
+}
+body.home #main #content #featured-box ul {
+	height:379px;
+	width:629px;
+	overflow:hidden;
+	position:relative;
+}
+body.home #main #content #featured-box li {
+	text-align:center;
+	height:374px;
+	width:624px;
+	position:absolute;
+	xtop:379px;
+	padding: 5px;
+}
+body.home #main #content #featured-box li div {
+	position:absolute;
+	bottom:5px;
+	left:5px;
+	padding:15px 10px;
+	width:604px;
+	background:url(../img/opa75.png) left center repeat-x;
+}
+body.home #main #content #featured-box li div p {
+	text-align:left;
+	color:#fff;
+	margin:0;
+}
+body.home #main #content #featured-box li div p strong {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+body.home #main #content #featured-box li p.headline {
+	width:300px;
+	float:right;
+	text-align:right;
+	max-height:18px;
+	text-overflow:ellipsis;
+	overflow:hidden;
+}
+body.home #main #content #featured-box li img.loading {
+	margin-top:170px;
+}
+body.home #main #content #right>div {
+	padding:15px 15px 7px 15px;
+	margin-bottom:25px;
+	height:90px;
+	background:#fff;
+}
+body.home #main #content #right>div>p{
+	margin-right:80px;
+}
+body.home #main #content #right #quick-search {
+	height:auto;
+}
+body.home #main #content #right #quick-search p {
+	min-height:22px;
+}
+body.home #main #content #right #quick-search p select {
+	height:22px;
+	background:#fff;
+}
+body.home #main #content #right #quick-search p label {
+	margin-right:5px;
+}
+body.home #main #content #right #quick-search p input[type="radio"] {
+	margin:3px 3px 0 0;
+}
+body.home #main #content #right #quick-search select {
+	width:249px;
+}
+body.home #main #content #right #quick-search .select-box {
+	height:92px;
+	xwidth:249px;
+	overflow-y:scroll;
+	margin:0 0 13px 0;
+	border:1px solid #666;
+	color:#000;
+}
+body.home #main #content #right #quick-search .select-box input {
+	margin-left:5px;
+}
+body.home #main #content #right #quick-search .select-box label {
+	display:block;
+	margin-right:10px;
+	padding-top:3px;
+}
+body.home #main #content #right #quick-search .price select {
+	width:116px;
+}
+body.home #main #content #right #quick-search .price select+select {
+	margin-left:17px;
+}
+body.home #main #content #right #quick-search .price .price_to {
+	margin-left:17px;
+}
+body.home #main #content #right #quick-search .bbc select {
+	width:73px;
+	margin-right:15px;
+}
+body.home #main #content #right #quick-search .bbc .cars {
+	margin-right:0;
+}
+body.home #main #content #right #quick-search .submit input {
+}
+body.home #main #content #right #quick-search .submit input+input {
+	margin-left:5px;
+}
+body.home #main #content #right #appraisal {
+	background:#fff url(../img/appraisal_bg.jpg) 195px center no-repeat;
+	cursor:pointer;
+}
+body.home #main #content #right #testimonials {
+	background:#fff url(../img/testimonials.jpg) 190px center no-repeat;
+	margin-bottom:20px;
+	cursor:pointer;
+}
+body.home #main #content #right #appraisal p a, body.home #main #content #right #appraisal p a:hover, body.home #main #content #right #testimonials p a, body.home #main #content #right #testimonials p a:hover {
+	text-decoration:none;
+	color:#333;
+}
+body.home #main #content #right #property-alert {
+	background:#fff url(../img/alert_bg.png) right top no-repeat;
+	margin-bottom: 0;
+	height:190px;
+}
+body.home #main #content #right #property-alert p {
+	margin:0 0 20px 0;
+}
+body.home #main #content #right #property-alert .register {
+	margin-bottom:40px;
+	text-transform:uppercase;
+}
+body.home #main #content #right #property-alert .register a {
+	display:inline-block;
+	padding:10px 30px;
+	color:#fff;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e2e2e', endColorstr='#6a6a6a'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#2e2e2e), to(#6a6a6a)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #2e2e2e,  #6a6a6a); /* for firefox 3.6+ */
+}
+body.home #main #content #right #property-alert .register a:hover {
+	text-decoration:none;
+}

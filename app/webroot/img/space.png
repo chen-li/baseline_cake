@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Jackson & Rowe Real Estate</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="icon" href="http://www.jacksonrowe.com.au/img/favicon.ico" type="image/x-icon">
+	<meta name="description" content="Home Page in Jackson & Rowe Real Estate.">	<meta name="keywords" content="home, page">
+	<link rel="stylesheet" type="text/css" href="http://www.jacksonrowe.com.au/css/reset.css" media="screen, projection, print" />
+	<link rel="stylesheet" type="text/css" href="http://www.jacksonrowe.com.au/css/style.css" media="screen, projection, print" />
+	<link rel="stylesheet" type="text/css" href="http://www.jacksonrowe.com.au/css/menu_base.css" media="screen, projection, print" />
+
+	<!-- listing -->
+	<link rel="stylesheet" type="text/css" href="http://www.jacksonrowe.com.au/css/listings.css" media="screen, projection, print" />
+	
+	<!-- index -->
+	<link rel="stylesheet" type="text/css" href="http://www.jacksonrowe.com.au/css/slideshow.css" media="screen, projection, print" />
+	
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" type="text/css" href="http://www.jacksonrowe.com.au/css/styleIE8.css" media="screen, projection" />
+	<![endif]-->
+	<!--[if lte IE 7]>
+		<link rel="stylesheet" type="text/css" href="http://www.jacksonrowe.com.au/css/styleIE7.css" media="screen, projection" />
+	<![endif]-->
+	<script type="text/javascript" src="http://www.jacksonrowe.com.au/js/jquery-1.4.2.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){		
+			$(".menu ul").hover(
+				function(){$(this).parent().children('a:first').addClass('dropdown');},
+				function(){$(this).parent().children('a:first').removeClass('dropdown');}
+			);
+		});
+	</script>
+</head>
+
+
+
+<body id="home">
+
+	<a name="top"></a> 
+	<div id="wrapper">
+	<div id="wrap">
+		<div id="header">
+			<dl>
+				<dd class="logo">
+					<a href='http://www.jacksonrowe.com.au/'><img src="http://www.jacksonrowe.com.au/img/logo.png" width="97" height="100" alt="Jackson and Rowe"></a>
+				</dd>
+				<dd class="branding">
+					<img src="http://www.jacksonrowe.com.au/img/branding.png" alt="Jackson and Rowe">
+				</dd>
+				<dd class="contacts">5 Church St, RYDE<br>
+				NSW 2112 Australia<br>
+				PO Box 204, Ryde, 1680<br>
+				Ph: 02 8878 1900<br>
+				Fx: 02 9807 3518</dd>
+			</dl>
+		</div>
+		<div id="main">
+			<div id="menu">
+				<ul class="menu">
+					<li id="buyList" class="first">
+						<a href="#" id="mm_buying">Buy</a>
+						<ul>
+							<li class="first"><a href="http://www.jacksonrowe.com.au/buying/listings.php">Homes for Sale</a></li>
+							<li><a href="http://www.jacksonrowe.com.au/buying/open-homes.php">Open for Inspection</a></li>
+							<li class="last"><a href="http://www.jacksonrowe.com.au/buying/propertyalert.php">Property Alert</a></li>
+						</ul>
+					</li>						
+					<li id="sellList">
+						<a href="#" id="mm_selling">Sell</a>
+						<ul>
+							<li class="first"><a href="http://www.jacksonrowe.com.au/selling/guide_to_selling.php">Guide to Selling</a></li>
+							<li class="last"><a href="http://www.jacksonrowe.com.au/selling/market_appraisal.php?q=sell">Request Free Market Appraisal</a></li>
+							<li class="last"><a href="http://www.jacksonrowe.com.au/selling/recent-sales.php">Recent Sales</a></li>
+						</ul>
+					</li>
+					<li id="rentList">
+						<a href="#" id="mm_renting">Rent</a>
+						<ul>
+			
+							<li class="first"><a href="http://www.jacksonrowe.com.au/renting/rental-listings.php">Homes for Lease</a></li>
+							<li><a href="http://www.jacksonrowe.com.au/renting/rental_inspections.php">Open for Inspection</a></li>
+							<li><a href="http://www.jacksonrowe.com.au/renting/guide_to_renting.php">Guide to Renting</a></li>
+							<li class="last"><a href="http://www.jacksonrowe.com.au/renting/tenancy_application.php">Rental Application Form</a></li>
+							<li class="last"><a href="http://www.jacksonrowe.com.au/buying/propertyalert.php">Property Alert</a></li>
+						</ul>
+					</li>
+					<li id="landlordsList">
+						<a href="#" id="mm_landlords">Landlords</a>
+						<ul>
+							<li class="first"><a href="http://www.jacksonrowe.com.au/landlords/info_for_landlords.php">Information for Landlords</a></li>
+							<li><a href="http://www.jacksonrowe.com.au/selling/market_appraisal.php?q=rent">Rental Appraisal</a></li>
+							<li class="last"><a href="http://www.jacksonrowe.com.au/landlords/insurance.php">Insurance</a></li>
+						</ul>
+					</li>
+					<li id="tenantsList">
+						<a href="#" id="mm_tenants">Tenants</a>
+						<ul>
+							<li class="first"><a href="http://www.jacksonrowe.com.au/tenants/info_for_tenants.php">Information for Tenants</a></li>
+							<li><a href="http://www.jacksonrowe.com.au/tenants/vacate_notice.php">Vacate Notice</a></li>
+							<li><a href="http://www.jacksonrowe.com.au/tenants/maintenance_request.php">Request Maintenance</a></li>
+							<li class="last"><a href="http://www.jacksonrowe.com.au/tenants/emergency_tradesmen.php">Emergency Tradesmen</a></li>
+						</ul>
+					</li>
+					<li id="ourcompanyList">
+						<a href="#" id="mm_ourcompany">Our Company</a>
+						<ul>
+							<li class="first"><a href="http://www.jacksonrowe.com.au/about/our_history.php">Our History</a></li>
+							<li><a href="http://www.jacksonrowe.com.au/about/department_overview.php">Department Overview</a></li>
+							<li class="last"><a href="http://www.jacksonrowe.com.au/contact/contact-us.php">Contact Us</a></li>
+						</ul>
+					</li>
+					<li id="usefulinfoList">
+						<a href="#" id="mm_usefulinfo">Useful Info</a>
+						<ul>
+							<li class="first"><a href="http://www.jacksonrowe.com.au/useful_info/useful-links.php">Useful Links</a></li>
+							<li class="last"><a href="http://www.jacksonrowe.com.au/useful_info/suburb_profiles.php">Suburb Profiles</a></li>
+							<li class="last"><a href="http://www.jacksonrowe.com.au/useful_info/reports.php">Reports</a></li>
+						</ul>
+					</li>
+					<li id="contactList"><a href="http://www.jacksonrowe.com.au/contact/contact-us.php">Contact Us</a></li>
+					<li id="homeList" class="last"><a href="http://www.jacksonrowe.com.au/">Home</a></li>
+				</ul>
+			</div>
+			<div id="content">
+
+<link rel="stylesheet" type="text/css" href="http://www.jacksonrowe.com.au/css/jquery.fancybox-1.3.1.css" media="screen, projection, print" />
+<!-- index -->
+<script type="text/javascript" src="http://www.jacksonrowe.com.au/js/jquery.slideshow.js"></script>
+<script type="text/javascript" src="http://www.jacksonrowe.com.au/js/jquery.fancybox-1.3.1.pack.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#slideshow').slideShow({
+			interval: 5
+		});
+
+		$('#forgotPassword').fancybox({
+			'height'	: 180
+		});
+	});
+</script>
+<div id="left">
+					<div id="slideshow" class="slideShow">
+												<ul class="slides">
+														<li class="slide"><p>Jackson & Rowe Office</p><img src="http://www.jacksonrowe.com.au/cms-2-46-1.jpg" title="Jackson & Rowe Office" alt="image" width="624" height="374" /></li>
+														<li class="slide"><p>St Charles Church</p><img src="http://www.jacksonrowe.com.au/cms-2-47-2.jpg" title="St Charles Church" alt="image" width="624" height="374" /></li>
+														<li class="slide"><p>Bales Park Chatswood</p><img src="http://www.jacksonrowe.com.au/cms-2-49-4.jpg" title="Bales Park Chatswood" alt="image" width="624" height="374" /></li>
+														<li class="slide"><p>Ryde Oval</p><img src="http://www.jacksonrowe.com.au/cms-2-52-7.jpg" title="Ryde Oval" alt="image" width="624" height="374" /></li>
+														<li class="slide"><p>North Ryde Train Station</p><img src="http://www.jacksonrowe.com.au/cms-2-53-8.jpg" title="North Ryde Train Station" alt="image" width="624" height="374" /></li>
+														<li class="slide"><p>Ryde - Parramatta Golf Course</p><img src="http://www.jacksonrowe.com.au/cms-2-55-10.jpg" title="Ryde - Parramatta Golf Course" alt="image" width="624" height="374" /></li>
+														<li class="slide"><p>Top Ryde Shopping Centre</p><img src="http://www.jacksonrowe.com.au/cms-2-63-2408551695.jpg" title="Top Ryde Shopping Centre" alt="image" width="624" height="374" /></li>
+														<li class="slide"><p>Stonebar Restaurant</p><img src="http://www.jacksonrowe.com.au/cms-2-67-2509549634.jpg" title="Stonebar Restaurant" alt="image" width="624" height="374" /></li>
+														<li class="slide"><p>Berry Island</p><img src="http://www.jacksonrowe.com.au/cms-2-70-2509541941.jpg" title="Berry Island" alt="image" width="624" height="374" /></li>
+														<li class="slide"><p>North Ryde Community Centre</p><img src="http://www.jacksonrowe.com.au/cms-2-71-2509582849.jpg" title="North Ryde Community Centre" alt="image" width="624" height="374" /></li>
+													</ul>
+						<div class="navigation" id="slideshow-caption">
+														<span><a href="javascript:void(0);" class="page">1</a></span>
+														<span><a href="javascript:void(0);" class="page">2</a></span>
+														<span><a href="javascript:void(0);" class="page">3</a></span>
+														<span><a href="javascript:void(0);" class="page">4</a></span>
+														<span><a href="javascript:void(0);" class="page">5</a></span>
+														<span><a href="javascript:void(0);" class="page">6</a></span>
+														<span><a href="javascript:void(0);" class="page">7</a></span>
+														<span><a href="javascript:void(0);" class="page">8</a></span>
+														<span><a href="javascript:void(0);" class="page">9</a></span>
+														<span><a href="javascript:void(0);" class="page">10</a></span>
+													</div>
+											</div>
+					<!--welcome-->
+					<div class="cms-text" id="welcome">
+						<h1>Welcome to Jackson &amp; Rowe</h1>
+						<p>Thank you for taking the time to find out a little more about our services and how we can help with your real estate needs. We are confident that whatever your needs, we have the best products, people &amp; services available to make your future a lot more certain. The main services we provide include:</p>
+						<ul>
+							<li>Residential Sales</li>
+							<li>Land Sales</li>
+							<li>Property Management</li>
+						</ul>
+						<p>We invite you to take advantage of our experience, unsurpassed levels of service &amp; commitment to delivering results beyond your expectations.</p>
+						<p><a href="about/our_history.php">View our Company Profile &#0187;</a></p>					</div>	
+				</div>
+				<div id="right">
+					<div id="side-slots">
+						<div id="quick-search">
+							<h3>Property Search</h3>
+							<p>Find your dream home!</p>
+							<form id="fastfind" method='post' action='http://www.jacksonrowe.com.au/buying/listings.php'>
+								<p><input id="qs_buy" name="" type="radio" value="buy" checked="checked" onclick="javascript:setlist(this);">
+								<label for="qs_buy_title">Buy</label>
+								<input id="qs_rent" name="" type="radio" value="rent"  onclick="javascript:setlist(this);">
+								<label for="qs_rent_title">Rent</label> <input class="go" type="submit" value="" /></p>
+							</form>
+
+						</div>
+						<div id="internet-appraisal">
+							<a href="http://www.jacksonrowe.com.au/selling/market_appraisal.php">
+							<h3>Internet Appraisal</h3>
+							<p>Know what your property is worth? Click for a Free No Obligation Appraisal</p></a>
+						</div>
+						<div id="reports">
+							<a href="http://www.jacksonrowe.com.au/useful_info/reports.php">
+							<h3>Reports</h3>
+							<p>Click here to get access to our range of free property reports</p></a>
+						</div>
+					</div>
+					
+					<div id="property-alert-login">
+						<img src="http://www.jacksonrowe.com.au/img/alert_login_top.jpg" width="295" height="9">
+						<h2>Property Alert</h2>
+						<div id="alert-login-content">
+							<p>Find out about properties when they first become available. <a href="http://www.jacksonrowe.com.au/buying/propertyalert.php">Register Now!</a></p>
+							<p>Already a member? Login below:</p>
+							<form name="login" method="post" action="http://www.jacksonrowe.com.au/buying/propertyalert.php">
+								<p><label>Email:</label><input type="text" id="" name="Username" value="" class="input_login"/></p>
+								<p><label>Password:</label><input type="password" id="" name="Password" value="" class="input_login"/></p>
+								<p><label>&nbsp;</label><span><a href="http://www.jacksonrowe.com.au/forgot-password.php" id="forgotPassword" class="iframe">password?</a></span><input type="submit" id="" value="" class="login" name="login"/></p>
+							</form>
+						</div>
+					</div>
+				</div>
+
+<!-- quick search js -->
+<script type="text/javascript">
+//<![CDATA[
+function setlist(radio) {
+	if (radio.value == "buy")
+	{
+		$('#fastfind').attr('action','http://www.jacksonrowe.com.au/buying/listings.php');
+	}
+	else if (radio.value == "rent")
+	{
+		$('#fastfind').attr('action','http://www.jacksonrowe.com.au/renting/rental-listings.php');
+	}
+}
+//]]>
+</script>
+			</div> <!-- Close for id="content"-->
+		</div> <!-- Close for id="wrap"-->
+	</div> <!-- Close for id="wrapper"-->
+
+	<div id="footer-wrap">
+		<div id="footer">
+			<p>
+				<a href="http://www.facebook.com/pages/Ryde-Australia/Jackson-Rowe-Real-Estate/291641168578?ref=ts" target="_blank"><img src="http://www.jacksonrowe.com.au/img/facebook_icon.png" alt="Follow us on Facebook" border="0" style="margin-right: 10px; margin-bottom: 12px; float: left;">Follow us on Facebook</a>
+			</p>
+			<p>
+				<a href="http://www.jacksonrowe.com.au/">Home</a>&nbsp;|&nbsp;
+				<a href="http://www.jacksonrowe.com.au/other/privacy.php">Privacy Policy</a>&nbsp;|&nbsp;
+				<a href="http://www.jacksonrowe.com.au/other/sitemap.php">Sitemap</a><br>
+				Jackson & Rowe specialises in real estate in Abbotsford, Artarmon, Ashfield, Auburn, Balmain, Balmain East, Beecroft, Breakfast Point, Cabarita, Canada Bay, Carlingford, Castle Cove, Castlecrag, Chatswood, Cheltenham, Cherrybrook, Chiswick, Concord, Concord West, <a href="http://www.jacksonrowe.com.au/buying/NSW/Northern-Suburbs/DENISTONE">Denistone</a>, Denistone East, Denistone West, Double Bay, Drummoyne, Dundas, Dundas Valley, East Killara, East Lindfield, East Ryde, Eastwood, Epping, <a href="http://www.jacksonrowe.com.au/buying/NSW/Parramatta/ERMINGTON">Ermington</a>, Five Dock, Gladesville, Gordon, Henley, Homebush, Homebush Bay, Homebush West, Hornsby, Hunters Hill, Huntleys Cove, Huntleys Point, Killara, Lane Cove, Lane Cove West, Liberty Grove, Lilyfield, Linley Point, Lindfield, Longueville, Macquarie, <a href="http://www.jacksonrowe.com.au/buying/NSW/Northern-Suburbs/MACQUARIE-PARK">Macquarie Park</a>, Marsden Park, <a href="http://www.jacksonrowe.com.au/buying/NSW/Northern-Suburbs/MEADOWBANK">Meadowbank</a>, Melrose Park, Middle Cove, Naremburn, Newington, Normanhurst, North Epping, North Parramatta, North Rocks, <a href="http://www.jacksonrowe.com.au/buying/NSW/Northern-Suburbs/NORTH-RYDE">North Ryde</a>, North Turramurra, Northbridge, Northmead, Oatlands, Parramatta, Pennant Hills, <a href="http://www.jacksonrowe.com.au/buying/NSW/Northern-Suburbs/PUTNEY">Putney</a>, Pymble, Rhodes, Riverview, Rosehill, Roseville, Roseville Chase, Rozelle, Russell Lea, Rydalmere, Ryde, Silverwater, South Turramurra, St Ives, St Leonards, Strathfield, Telopea, Tennyson Point, Thornleigh, Turramurra, Wahroonga, Wareemba, West Pennant Hills, West Pymble, <a href="http://www.jacksonrowe.com.au/buying/NSW/Northern-Suburbs/WEST-RYDE">West Ryde</a>, Westleigh, Westmead, Willoughby, Wollstonecraft
+				
+			</p>
+			<p>
+				<span>
+					<a href="#top">^ Back to Top</a>
+				</span>© 2010 - <a href="http://www.jacksonrowe.com.au/">Jackson & Rowe Real Estate</a>&nbsp;|&nbsp;Designed &amp; Powered by 
+				<a href="http://www.agentbox.com.au" target="_blank">Agentbox</a>
+			</p>
+		</div>
+	</div>
+	<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">try {var pageTracker = _gat._getTracker("UA-8762511-26");pageTracker._trackPageview();} catch(err) {}</script>
+</body>
+</html>

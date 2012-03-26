@@ -1,0 +1,175 @@
+/*** Inspections Page ***/
+body.inspections #content h2 {
+	color:#fff;
+	clear:both;
+	margin: 0 0 12px 0;
+    padding: 10px 0 11px 8px;
+	xbackground:#9097a9;
+	background: -webkit-gradient(linear, left top, left bottom, from(#2e2e2e), to(#6a6a6a)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #2e2e2e,  #6a6a6a); /* for firefox 3.6+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e2e2e', endColorstr='#6a6a6a'); /* for IE */
+}
+body.inspections #content p.print {
+	float:right;
+}
+body.inspections #content p.sort-by a {
+	color:#666;
+}
+body.inspections #content p.sort-by a.active {
+	color:#2FA694;
+	cursor:default;
+}
+body.inspections #content p.sort-by a.active:hover {
+	text-decoration:none;
+}
+body.inspections #content p.sort-by select {
+	width:150px;
+}
+body.inspections #content>ul {
+	border: 1px solid #999;
+	border-top:none;
+	margin-bottom:25px;
+}
+body.inspections #content>ul>li {
+	padding:10px;
+}
+body.inspections #content>ul>li+li {
+	border-top:1px solid #999;
+}
+body.inspections #content>ul>li.title {
+	padding:0;
+	border:none;
+}
+body.inspections #content>ul>li.title+li {
+	border:none;
+}
+body.inspections #content ul li .photo {
+	float:left;
+	width:147px;
+	height:98px;
+	margin:0 30px 0 0;
+	padding:5px;
+}
+body.inspections #content ul li .photo img {
+	max-width:148px;
+	height:98px;	
+}
+body.inspections #content ul li .info {
+	height:112px;
+	overflow:hidden;
+}
+body.inspections #content ul li .info dl {
+	line-height:16px;
+}
+body.inspections #content ul li .info dl dt {
+	float:left;
+	width:80px;
+	font-weight:bold;
+}
+body.inspections #content ul li .info dl dd {
+	margin:0 0 5px 80px;
+}
+body.inspections #content ul li .info .basic {
+	border-right:1px solid #999;
+	float:left;
+	height:112px;
+	margin-right:10px;
+	padding-right:10px;
+	width:420px;
+}
+body.inspections #content ul li .info .basic .time {
+	float:left;
+	width:140px;
+	height:100px;
+}
+body.inspections #content ul li .info .tools {
+	margin-left:440px;
+}
+body.inspections #content ul li .info .tools .bbc {
+	font-weight:bold;
+}
+body.inspections #content ul li .info .tools .bbc img {
+	vertical-align:text-bottom;
+}
+body.inspections #content ul li .info .tools ul {
+	margin-top:0;
+}
+body.inspections #content ul li .info .tools dl {
+	height:60px;
+}
+
+/*Auctions Page*/
+body.inspections.auctions #content ul li .info .basic .time {
+	height:88px;
+}
+
+
+/*** Inspections Print ***/
+body.printlist #header {
+	height:78px;
+}
+body.printlist #header, body.printlist #content{
+	margin:0 auto 10px auto;
+	width:620px;
+}
+body.printlist #header p {
+	float:left;
+}
+body.printlist #content h2 {
+	background:url("../img/title_bg.png") repeat-x scroll left top transparent;
+	color:#FFFFFF;
+	padding:10px 0 11px 8px;
+}
+body.printlist #content p {
+	color:#000;
+}
+body.printlist #content p.print {
+	float:right;
+}
+body.printlist #content p.sort-by {
+
+}
+body.printlist #content p.sort-by a.active {
+	color:#ccc;
+}
+body.printlist #content p.sort-by select {
+	width:150px;
+}
+body.printlist #content>ul>li {
+	padding:10px 0;
+}
+body.printlist #content>ul>li+li {
+	border-top:1px solid #999;
+}
+body.printlist #content>ul>li.title {
+	padding:0;
+	border:none;
+}
+body.printlist #content>ul>li.title+li {
+	border:none;
+}
+body.printlist #content ul li .photo {
+	float:left;
+	width:130px;
+	height:98px;
+	margin:0 30px 0 0;
+}
+body.printlist #content ul li .photo img {
+	width:150px;
+	height:98px;	
+}
+body.printlist #content ul li .info {
+	height:98px;
+	overflow:hidden;
+}
+body.printlist #content ul li .info .basic {
+	height:80px;
+}
+body.printlist #content ul li .info .basic .time {
+	float:left;
+	width:120px;
+	height:88px;
+}
+body.printlist #content ul li .info .tools ul {
+	margin-top:65px;
+}

@@ -1,0 +1,42 @@
+body.staff #content h2 {
+	color:#fff;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e2e2e', endColorstr='#6a6a6a'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#2e2e2e), to(#6a6a6a)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #2e2e2e,  #6a6a6a); /* for firefox 3.6+ */
+	margin: 4px 0 12px 0;
+    padding: 10px 0 11px 8px;
+	clear:both;
+}
+body.staff #content .staff {
+	float:left;
+	width:450px;
+	height:140px;
+	xoverflow:hidden;
+	margin-bottom:20px;
+}
+body.staff #content .staff p {
+	margin-bottom:4px;
+}
+body.staff #content .staff a[href="javascript:;"] {
+	cursor:default;
+}
+body.staff #content .staff .staff-photo {
+	float:left;
+	width:100px;
+	margin-right:20px;
+	padding:5px;
+}
+body.staff #content .staff .staff-info {
+	height:130px;
+	overflow:hidden;
+	padding-top:10px;
+}
+body.staff #content .staff .staff-info .title {
+	margin-bottom:8px;
+}
+body.staff #content .staff .staff-info .phone {
+	height:38px;
+}
+body.staff #content .staff .staff-info .link {
+	margin:10px 0 0 0;
+}

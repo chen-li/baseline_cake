@@ -1,0 +1,84 @@
+.vert-gallery {
+	width: 670px;
+	height:333px;
+	padding: 0 0 0 0;
+	position: relative;
+}
+.vert-gallery .vert-image-wrapper{
+	float: left;
+}
+.vert-gallery .vert-image-wrapper{
+	width: 500px; /*!change!*/
+	height: 333px; /*!change!*/
+	margin-right:16px;
+	overflow: hidden;
+	position:relative;
+}
+.vert-gallery .vert-image-wrapper .vert-loader {
+	position:absolute;
+	top:50%;
+	left:28%;
+	z-index:100;
+}
+.vert-gallery .vert-image-wrapper img{
+	max-width:500px;
+	max-height:334px;
+}
+.vert-gallery .vert-image-wrapper span.magnifier{
+	background:url("../img/1px.png") no-repeat scroll center center transparent;
+	height:100%;
+	left:0;
+	position:absolute;
+	top:0;
+	width:500px;
+	cursor:pointer;
+	z-index:10;	
+}
+.vert-gallery .vert-image-wrapper span.magnifier:hover{
+	background:url(../img/open.png) center no-repeat;
+	z-index:10;
+}
+
+.vert-gallery .vert-nav {
+	height:310px;
+	overflow:hidden;
+	padding:12px 0;
+}
+.vert-gallery .vert-nav .vert-thumbs{
+	width:150px;
+	height:310px;
+	overflow:hidden;
+}
+.vert-gallery .vert-nav .vert-thumbs li {
+	text-align:center;
+	height:105px;
+	list-style:none;
+}
+.vert-gallery .vert-nav .vert-thumbs li img {
+	max-width:150px;
+	max-height:100px;
+}
+.vert-gallery .next{
+	display: block;
+	width: 27px;
+	height: 27px;
+	background: url(../img/vert-arrow_bg.png) left top no-repeat;
+	position: absolute;
+	bottom:0;
+	right:65px;
+}
+.vert-gallery .next:hover{
+	background: url(../img/vert-arrow_bg.png) left bottom no-repeat;
+}
+.vert-gallery .prev{
+	display: block;
+	width: 27px;
+	height: 27px;
+	background: url(../img/vert-arrow_bg.png) right top no-repeat;
+	position: absolute;
+	top: 0px;
+	right:65px;
+}
+.vert-gallery .prev:hover{
+	background: url(../img/vert-arrow_bg.png) right bottom no-repeat;
+}

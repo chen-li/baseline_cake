@@ -1,0 +1,222 @@
+/*** Property Alert Page ***/
+body.alert #content h2 {
+	color:#fff;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e2e2e', endColorstr='#6a6a6a'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#2e2e2e), to(#6a6a6a)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #2e2e2e,  #6a6a6a); /* for firefox 3.6+ */
+    padding: 10px 0 11px 8px;
+	clear:both;
+}
+body.alert #content #free-text {
+	margin-bottom:20px;
+}
+body.alert #content #free-text li {
+}
+body.alert #content #free-text #login {
+	float:right;
+	border:1px solid #999;
+	width:255px;
+	min-height:210px;
+	padding:0 10px;
+	margin:0 0 10px 10px;
+}
+body.alert #content #free-text #login #login-form {
+	padding:0 2px;
+}
+body.alert #content #free-text #login #login-form p {
+	margin-bottom:16px;
+}
+body.alert #content #free-text #login h2 {
+	margin:10px 0 12px 0;
+}
+body.alert #content #free-text #login .message {
+	margin-bottom:16px;
+}
+body.alert #content #free-text #login form label {
+	font-weight:bold;
+	display:inline-block;
+	width:62px;
+	margin-right:5px;
+}
+body.alert #content #free-text #login form input[type="text"], body.alert #content #free-text #login form input[type="password"] {
+	width:180px;
+}
+body.alert #content #free-text #login form #forgotPassword {
+	float:right;
+	margin-top:5px;
+}
+body.alert #content .tabs {
+	margin-bottom:25px;
+}
+body.alert #content .tabs>ul {
+	height:32px;
+	border:1px solid #999;
+	border-top:none;
+	border-bottom:none;
+}
+body.alert #content .tabs>ul>li {
+	float:left;
+}
+body.alert #content .tabs>ul>li a {
+	display:block;
+	padding:9px 20px 10px 10px;
+}
+body.alert #content .tabs>ul>li+li a {
+	border-left:1px solid #999;
+}
+body.alert #content .tabs>ul>li a:hover {
+	text-decoration:none;
+}
+body.alert #content .tabs>ul>li a.on {
+	font-weight:bold;
+}
+body.alert #content .tabs>ul>li a.off {
+	color:#666;
+}
+body.alert #content .tabs>ul>li a.last {
+}
+body.alert #content .tabs>ul>li a.logged.last {
+}
+body.alert #content .tabs .tab-content {
+	border:1px solid #999;
+	padding:16px 10px 10px 10px;
+}
+body.alert #content .tabs .tab-content form label {
+	display:block;
+	float:left;
+	width:190px;
+	font-weight:bold;
+}
+body.alert #content .tabs .tab-content form label+label {
+	display:inline;
+	float:none;
+}
+body.alert #content .tabs .tab-content form p {
+	min-height:20px;
+}
+body.alert #content .tabs .tab-content form p.security {
+	float:left;
+}
+body.alert #content .tabs .tab-content form input.short {
+	width:75px;
+}
+body.alert #content .tabs .tab-content form input.mid {
+	width:27.7%;
+}
+body.alert #content .tabs .tab-content form input.long {
+	width:72%;
+}
+body.alert #content .tabs .tab-content form select.short {
+	width:83px;
+}
+body.alert #content .tabs .tab-content form select.mid {
+	width:126px;
+}
+body.alert #content .tabs .tab-content form select.long {
+	width:255px;
+}
+body.alert #content .tabs .tab-content form p#build {
+	display:none;
+}
+body.alert #content .tabs .tab-content form .container {
+	border:1px solid #999;
+	height:82px;
+	margin:0 0 12px 190px;
+	overflow:auto;
+	width:253px;
+}
+body.alert #content .tabs .tab-content form .container p {
+	margin-bottom:1px;
+}
+body.alert #content .tabs .tab-content form .container p label {
+	display:inline-block;
+	float:none;
+	width:100%;
+	font-weight:normal;
+}
+body.alert #content form .security table {
+	width:180px;
+	height:45px;
+	xborder:5px solid #fff;
+	margin-bottom: 15px;
+	background:#fff;
+}
+
+
+/*My Properties - step a*/
+body.alert #content #stepa>ul>li {
+	padding:10px 0;
+	border-bottom:1px solid #999;
+}
+body.alert #content #stepa>ul>li.odd {
+	
+}
+body.alert #content #stepa>ul>li.title {
+	padding:0;
+	border:none;
+}
+body.alert #content #stepa ul li .photo {
+	float:left;
+	width:130px;
+	height:98px;
+	margin:0 30px 0 0;
+}
+body.alert #content #stepa ul li .photo img {
+	max-width:148px;
+	max-height:98px;	
+}
+body.alert #content #stepa ul li .info {
+	height:98px;
+	overflow:hidden;
+}
+body.alert #content #stepa ul li .info .basic {
+	border-right:1px solid #999;
+	float:left;
+	height:98px;
+	margin-right:23px;
+	padding-right:5px;
+	width:500px;
+}
+body.alert #content #stepa ul li .info .basic .time {
+	float:left;
+	width:140px;
+	height:88px;
+}
+body.alert #content #stepa ul li .info .tools ul {
+	margin-top:40px;
+}
+body.alert #content #stepa ul li .info .tools ul li {
+	height:23px;
+}
+
+/*My Searches - step b*/
+body.alert #content #stepb dl {
+	padding-top:5px;
+	height:20px;
+	width:100%;
+	clear:both;
+}
+body.alert #content #stepb dl+dl {
+	border-top:1px solid #ccc;
+}
+body.alert #content #stepb dl dt {
+	float:left;
+	width:360px;
+}
+
+body.alert #content form span.icon.question {
+	float:none;
+	display:inline-block;
+	vertical-align: bottom;
+}
+body.alert #content form .tooltip {
+	display:none;
+	background:transparent url(../img/black_arrow.png);
+	font-size:12px;
+	height:90px;
+	width:160px;
+	padding:15px 25px;
+	color:#fff;	
+	line-height:16px;	
+}
+

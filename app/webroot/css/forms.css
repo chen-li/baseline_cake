@@ -1,0 +1,76 @@
+body.forms h2 {
+	color:#fff;
+	margin: 4px 0 12px 0;
+    padding: 10px 0 11px 8px;
+	clear:both;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e2e2e', endColorstr='#6a6a6a'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#2e2e2e), to(#6a6a6a)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #2e2e2e,  #6a6a6a); /* for firefox 3.6+ */
+}
+body.forms #content form p {
+	margin-bottom:15px;
+	min-height:22px;
+	clear:both;
+}
+body.forms #content form label {
+	width:180px;
+	display:block;
+	float:left;
+	font-weight:bold;
+	margin:0 10px 5px 8px;
+	padding-top:2px;
+}
+body.forms #content form em span, form .required {
+	color:#CC0000;
+	font-weight:bold;
+}
+body.forms #content form input.short {
+	width:75px;
+}
+body.forms #content form select.short {
+	width:75px;
+}
+body.forms #content form input.mid {
+	width:54%;
+}
+body.forms #content form select.mid {
+	width:26.5%;
+}
+body.forms #content form div select.mid {
+	width:54.5%;
+}
+body.forms #content form .long {
+	width:76%;
+}
+body.forms #content form textarea.long {
+	height:100px;
+}
+body.forms #content form .security table {
+	width:180px;
+	height:45px;
+	xborder:5px solid #fff;
+	margin-bottom: 15px;
+	background:#fff;
+}
+body.forms #content form .flow-cont {
+	float:left;
+	width:48%;
+	margin-right:20px;
+}
+body.forms #content form .flow-cont+.flow-cont {
+	margin:0;
+}
+body.forms #content form span.icon.question {
+	float:none;
+	display:inline-block;
+	vertical-align: bottom;
+}
+body.forms #content form .tooltip {
+	display:none;
+	background:transparent url(../img/black_arrow.png);
+	font-size:12px;
+	height:90px;
+	width:160px;
+	padding:15px 25px;
+	color:#fff;	
+}

@@ -1,0 +1,215 @@
+body.printlist #header {
+	height:78px;
+	padding:0;
+}
+body.printlist #header, body.printlist #content{
+	margin:0 auto 10px auto;
+	width:620px;
+}
+body.printlist #header p {
+	float:left;
+}
+body.printlist #footer {
+	border:none;
+	padding:10px;
+}
+body.printlist #footer p {
+	text-align:center;
+}
+body.printlist #content>ul {
+	border:1px solid #999;
+	border-top:none;
+}
+body.printlist #content>ul#listings {
+	border:none;
+}
+body.printlist #content>ul>li {
+	padding:10px;
+}
+body.printlist #content>ul>li+li {
+	border-top:1px solid #999;
+}
+body.printlist #content>ul#listings>li+li {
+	border-top:none;
+}
+body.printlist #content>ul>li.title {
+	padding:0;
+	border:none;
+}
+body.printlist #content>ul>li.title+li {
+	border:none;
+}
+
+/*Auctions Page*/
+body.printlist #content #auction h2 {
+	background:#717173;
+	color:#FFFFFF;
+	padding:10px 0 11px 8px;
+}
+body.printlist #content #auction p {
+	color:#000;
+}
+body.printlist #content #auction p.print {
+	float:right;
+}
+body.printlist #content #auction p.sort-by {
+
+}
+body.printlist #content #auction p.sort-by a.active {
+	color:#ccc;
+}
+body.printlist #content #auction p.sort-by select {
+	width:150px;
+}
+body.printlist #content ul#auction li .photo {
+	float:left;
+	width:130px;
+	height:98px;
+	margin:0 30px 0 0;
+}
+body.printlist #content ul#auction li .photo img {
+	width:150px;
+	height:98px;
+}
+body.printlist #content ul#auction li .info {
+	height:98px;
+	overflow:hidden;
+}
+body.printlist #content ul#auction li .info .basic {
+	height:80px;
+}
+body.printlist #content ul#auction li .info .basic .time {
+	float:left;
+	width:150px;
+	height:88px;
+}
+body.printlist #content ul#auction li .info .tools {
+	padding-left:150px;
+}
+body.printlist #content ul#auction li .info .tools ul {
+	margin-top:65px;
+}
+
+
+/*** Inspections Print ***/
+body.printlist #content #inspection h2 {
+	background:#717173;
+	color:#FFFFFF;
+	padding:10px 0 11px 8px;
+}
+body.printlist #content #inspection p {
+	color:#000;
+	margin-bottom:8px;
+}
+body.printlist #content #inspection p.print {
+	float:right;
+}
+body.printlist #content #inspection p.sort-by {
+
+}
+body.printlist #content #inspection p.sort-by a.active {
+	color:#ccc;
+}
+body.printlist #content #inspection p.sort-by select {
+	width:150px;
+}
+body.printlist #content ul#inspection li.title {
+	padding:0;
+}
+body.printlist #content ul#inspection li .photo {
+	float:left;
+	width:130px;
+	height:98px;
+	margin:0 30px 0 0;
+}
+body.printlist #content ul#inspection li .photo img {
+	width:150px;
+	height:98px;
+}
+body.printlist #content ul#inspection li .info {
+	height:98px;
+	overflow:hidden;
+}
+body.printlist #content ul#inspection li .info .basic {
+	height:52px;
+}
+body.printlist #content ul#inspection li .info .basic .time {
+	float:left;
+	width:150px;
+	height:88px;
+}
+body.printlist #content ul#inspection li .info .tools {
+	padding-left:150px;
+}
+body.printlist #content ul#inspection li .info .tools .bbc {
+	font-weight:bold;
+}
+body.printlist #content ul#inspection li .info .tools .bbc img {
+	vertical-align:text-bottom;
+}
+body.printlist #content ul#inspection li .info .tools ul {
+	margin-top:65px;
+}
+
+/*listings*/
+body.printlist #content h2 {
+	background:#717173;
+	color:#FFFFFF;
+	padding:10px 8px 11px 8px;
+}
+body.printlist #content ul#listings{
+	border:none;
+}
+body.printlist #content>ul#listings>li {
+	padding:10px 0;
+	border-bottom:1px solid #999;
+}
+body.printlist #content>ul#listings>li.title {
+	padding:0;
+	border:none;
+}
+body.printlist #content>ul#listings>li.placeholder {
+	border:2px dashed #CCC;
+	padding:5px 0;
+	margin:5px 0;
+	min-height:115px;
+}
+body.printlist #content ul#listings li .photo {
+	float:left;
+	width:150px;
+	margin:0 30px 0 0;
+	
+	cursor:move;
+	position:relative;
+}
+body.printlist #content ul#listings li .photo>img {
+	width:150px;
+	max-height:100px;
+}
+body.printlist #content ul#listings li .photo .control {
+	position:absolute;
+	height:9px;
+	width:9px;
+	top:5px;
+	right:5px;
+	cursor:pointer;
+	display:none;
+}
+body.printlist #content ul#listings li .photo:hover .control {
+	display:block;
+}
+body.printlist #content ul#listings li .info {
+	max-height:120px;
+	overflow:hidden;
+}
+body.printlist #content ul#listings li .info p {
+	margin-bottom:2px;
+	font-size:12px;
+}
+body.printlist #content ul#listings li .info p.headline {
+	max-height:16px;
+	overflow:hidden;
+}
+body.printlist #content ul#listings li .info .bbc{
+	float:right;
+}

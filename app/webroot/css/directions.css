@@ -1,0 +1,45 @@
+body.directions {
+	background:#fff;
+}
+body.directions #directions-box {
+	width:855px;
+	height:550px;
+	overflow:hidden;
+}
+body.directions #directions-box #map-canvas {
+	width:600px;
+	height:550px;
+	float:left;
+}
+body.directions #directions-box #directions-panel {
+	width:255px;
+	height:530px;
+	padding-bottom:20px;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+body.directions #directions-box #directions-panel>div {
+	padding:0 5px;
+}
+body.directions #directions-box #directions-panel form {
+	padding:5px 5px 0 5px;
+}
+body.directions #directions-box #directions-panel form p {
+	margin-bottom:8px;
+}
+body.directions #directions-box #directions-panel form p.submit {
+	margin-bottom:0;
+}
+body.directions #directions-box #directions-panel form p input[type="text"] {
+	width:100%;
+}
+body.directions #directions-box #directions-panel form p input.example {
+	color:#ccc;
+	font-style:italic;
+}
+body.directions #directions-box #directions-panel td {
+	vertical-align:middle;
+}
+body.directions #directions-box #directions-panel img {
+	vertical-align:middle;
+}

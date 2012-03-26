@@ -1,0 +1,32 @@
+/*core structure*/
+.box-shadow {
+	background:#fff;
+	filter: none;
+	border:1px solid #CCC;
+}
+.container-shadow {
+	filter: none;
+}
+.container-shadow {
+}
+/*menu*/
+
+/*tabs*/
+
+/*header search*/
+form input.buy_btn {
+	vertical-align:top;
+}
+form input.rent_btn {
+	vertical-align:top;
+}
+/*home*/
+body.home #main #content .link-box li div {
+}
+/*listings*/
+form input.refine_btn {
+}
+/*details*/
+/*property alert*/
+/*fancyforms*/
+/*calculator*/

@@ -1,0 +1,130 @@
+/*** Brochure Page ***/
+
+body.brochure {
+	background: none;
+}
+body.brochure h1 {
+	padding: 15px 0;
+}
+body.brochure #wrap {
+	width: 620px;
+	margin: 0px auto;
+}
+body.brochure #header, body.brochure #content, body.brochure #footer, body.brochure #photos {
+	width: 620px !important;
+	margin: 0px auto !important;
+	float:none;
+}
+body.brochure #header {
+	padding:0;
+	height: auto;
+}
+body.brochure #header img{
+	padding:0;
+}
+body.brochure #content {
+	padding: 0px !important;
+}
+body.brochure #content  #left{
+	background:none;
+}
+body.brochure #content #left p, body.brochure #content #left a {
+}
+body.brochure #header dl {
+	height:27px;
+	background-color: #717173;
+}
+body.brochure #header dd {
+	float:left;
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: bold;
+}
+body.brochure #header dd#address {
+	width: 367px;
+	padding: 5px 0px 6px 10px;
+}
+body.brochure #header dd#icons {
+	width: 233px;
+	padding: 5px 10px 6px 0px;
+	text-align: right;
+}
+body.brochure #photos {
+	margin-bottom: 20px;
+	width: 620px;
+}
+body.brochure #photos img#mainimg {
+	float: left;
+	margin-right: 5px;
+	max-width: 413px;
+	max-height: 310px;
+}
+body.brochure #photos img#sub1, body.brochure #photos img#sub2 {
+	float: left;
+	width: 202px;
+	max-width: 202px;
+	max-height: 152px;
+}
+body.brochure #photos img#sub1 {
+	margin-bottom: 6px;
+}
+body.brochure #content #left {
+	width: 360px;
+	float: left;
+	xmargin-right: 25px;
+	border:none;
+	height: 370px;
+    overflow: hidden;
+}
+body.brochure #content #left p {
+	font-size: 12px;
+	text-align: justify;
+}
+body.brochure #content #right {
+	width: 230px;
+	float: right;
+	margin:0;
+}
+body.brochure #content #right dl {
+	padding-bottom: 15px;
+}
+body.brochure #content #right dt {
+	width: 100%;
+	font-weight: bold;
+	padding-bottom: 5px;
+	font-size: 12px;
+}
+body.brochure #content #right dd {
+	font-size: 12px;
+}
+body.brochure #content #right dl.inspection-time {
+	padding-bottom: 0;
+	height:18px;
+}
+body.brochure #content #right dl.inspection-time dt {
+	font-weight: normal;
+	float: left;
+	width: 90px;
+}
+body.brochure #content #right dd p {
+	font-size: 12px;
+	margin-bottom: 1px;
+}
+body.brochure #footer {
+	margin-top: 10px;
+	text-align: center;
+	background: #fff !important;
+}
+body.brochure #footer p {
+	color: #333333;
+	font-size: 11px;
+}
+body.brochure #footer span {
+	float: right;
+}
+body.brochure #footer .qr-code {
+	float:right;
+}
+body.brochure #content #right dd.contact {
+	margin-bottom:10px;
+}

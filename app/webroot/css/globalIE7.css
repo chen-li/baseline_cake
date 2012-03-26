@@ -1,0 +1,83 @@
+/*core structure*/
+.box-shadow {
+	background:#fff;
+	filter: none;
+	border:1px solid #CCC;
+}
+.container-shadow {
+	filter: none;
+}
+#content h2 {
+	min-height:16px;
+}
+/*menu*/
+
+/*tabs*/
+
+/*header search*/
+form input.buy_btn {
+	vertical-align:top;
+}
+form input.rent_btn {
+	vertical-align:top;
+}
+
+/*home*/
+body.home #main #content #right #property-alert .register a {
+	width:96px;
+	height:16px;
+}
+/*listings*/
+body.listings #content .listview>ul>li .photo {
+	padding-bottom:1px;
+}
+body.listings #content .galleryview>ul>li .info .tools ul {
+	width:77px;
+	line-height:normal;
+	margin-top:-2px;
+}
+body.listings #content .galleryview>ul>li .info .tools ul li {
+	height:20px;
+}
+body.listings #content .galleryview>ul>li .info .tools ul li.print_prop {
+	width:40px;
+}
+/*details*/
+body.details #content #left #agent-contact h2 {
+	
+}
+body.details #content #left #agent-contact .agent .agent-info {
+	width:260px;
+}
+body.details #content #left #agent-contact form p>span {
+	float: none;
+	display:inline-block;
+	width:210px;
+	text-align:right;
+}
+
+/*property alert*/
+/*brochure*/
+body.brochure #content {
+	padding-bottom:10px;
+}
+body.brochure #header img {
+	margin-bottom:-3px;
+}
+body.brochure #right>dl>dt, body.brochure #right>dl>dd {
+	width:228px !important;
+}
+/*fancyforms*/
+#fancyforms p {
+	margin-bottom:0;
+}
+/*calculator*/
+body.calculator #content .tab-container .tab-content .result table tr+tr td {
+	border-top:1px dotted #9097a9;
+}
+body.calculator #content .tab-container .tab-content.mortgage .result {
+	height:237px;
+}
+body.calculator #content .tab-container .tab-content.stamp-duty .result {
+	height:407px;
+}
