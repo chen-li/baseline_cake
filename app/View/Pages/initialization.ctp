@@ -6,19 +6,8 @@
         <li id="slide_3"><?php echo $this->Html->image("1px.png", array("alt" => "loading", "class" => "loading")); ?></li>
         <li id="slide_4"><?php echo $this->Html->image("1px.png", array("alt" => "loading", "class" => "loading")); ?></li>
       </ul>
-  </div><div id="pow">
-<div id="featured-box" class="box-shadow">
-<div id="featured-tag"><img src="http://baseline.dev.youragencies.com.au/img/featured_tag.png" alt="featured tag" width="80" height="78" /></div>
-    <ul>
-            <li id="fp_1"> <a href="http://baseline.dev.youragencies.com.au/1P0040"><img src="http://baseline.dev.youragencies.com.au/lt-1-1P0040-m-rse.jpg" alt="21 Burrows Road South, St Peters" /></a>
-        <div>
-	  <p class="headline" title="Exceptional Industrial building">Exceptional Industrial building</p>
-        <p><strong>Featured:</strong> 21 Burrows Road South, St Peters</p>
-        </div>
-      </li>
-        </ul>
 </div>
-</div>
+<?php echo $this->element('featured_property'); ?>
 <h1>Welcome to Your Agency </h1>
 <div id="welcome" class="cms-text">
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat nulla pariatur.</p>

@@ -85,6 +85,18 @@ class PagesController extends AppController {
  */
 	public function initialization(){
 		$this->set('title_for_layout', 'NSW Properties For Lease - search here for current Sutherland Shire Rental Properties');
-		$uses = array('Listing');
+		$this->loadModel('Listing');
+		$condition = array(
+			'conditions' => array(
+				'Listing.db_status' => '0',
+				'Listing.office_id' => array('1'),
+				'Listing.lt_status NOT IN (6,1,7,10)',
+				'Listing.lt_hvset & '.pow(2,14).'='.pow(2,14),
+			),
+			'order' => array('Listing.last_mod DESC'),
+			'limit' => 2
+		);
+		$fp_lt = $this->Listing->find('all', $condition);
+		$this->set('featureProperties', $fp_lt);
 	}
 }

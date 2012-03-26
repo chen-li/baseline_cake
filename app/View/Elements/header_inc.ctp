@@ -21,7 +21,7 @@
 <title><?php echo $title_for_layout?></title>
 <?php echo $this->Html->css(array('reset', 'global', 'menu_base', 'jquery.autocomplete', 'home')); ?>
 <script type="text/javascript">
-	var SITE_PATH = '<?php echo Router::url($this->here, true);?>';
+	var SITE_PATH = '<?php echo Router::url('/', true);?>';
 	var WSID = '664b6819212c3fa5e316587d6695aed7';
 	var start_idx = 0;
 </script>
@@ -35,6 +35,7 @@
 </head>
 
 <body class="home listings">
+<?php echo $this->element('sql_dump'); ?>
 <input type="hidden" id="folder_name" value="" />
 <input type="hidden" id="request_uri" value="index.php" />
 <div id="wrapper">

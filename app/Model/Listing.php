@@ -21,35 +21,14 @@ class Listing extends AppModel {
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
- * belongsTo associations
+ * hasMany associations
  *
  * @var array
  */
-	public $belongsTo = array(
-		'Office' => array(
-			'className' => 'Office',
-			'foreignKey' => 'office_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'Suburb' => array(
-			'className' => 'Suburb',
-			'foreignKey' => 'suburb_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'Region' => array(
-			'className' => 'Region',
-			'foreignKey' => 'region_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'State' => array(
-			'className' => 'State',
-			'foreignKey' => 'state_id',
+	public $hasMany = array(
+		'LtPhoto' => array(
+			'className' => 'LtPhoto',
+			'foreignKey' => 'lt_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

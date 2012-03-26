@@ -8,5 +8,4 @@ class ListingsController extends AppController {
 	public function index() {
 
 	}
-
 }
