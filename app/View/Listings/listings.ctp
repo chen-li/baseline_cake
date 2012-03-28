@@ -1,8 +1,9 @@
 <?php echo $this->Html->script(array('tabs', 'jquery.lazyload', 'jquery.fancybox', 'mapv3', 'http://maps.google.com/maps/api/js?sensor=false&region=AU', 'listings')); ?>
 <?php echo $this->Html->css(array('tabs', 'jquery.fancybox', 'listings', 'fancyforms')); ?>
 <h1><?php echo $search_title;?></h1>
-<form method="post" target="_blank" id="print_prop_form" action="<?php echo Router::url('/', true);?>system/listings-print.php?mode=listings">
 <div class="tab-container">
+<?php if(sizeof($listings) > 0){?>
+<form method="post" target="_blank" id="print_prop_form" action="<?php echo Router::url('/', true);?>system/listings-print.php?mode=listings">
 
 	<p id="tools"></p>
 	
@@ -16,7 +17,7 @@
 	<dl class="listing-nav-ordering">
 	</dl>
 	<!-- end page navigation -->
-	
+	<?php ob_start();?>
 	<ul>
 	<?php
 	//property list view
@@ -79,7 +80,6 @@
 		if($lt['Listing']['car']) {
 			$bbc['car'] = '<img src="'.Router::url('/', true).'img/car.png" alt="car" /> '.$lt['Listing']['car'];
 		}
-		}
 	?>
 	<li class="<?php echo $hv_shade;?>">
         <div class="photo box-shadow">
@@ -116,9 +116,31 @@
             </div>
         </div>
 	</li>
-	<? 
+	<?php
 		$i++;
 	}?>    
 	</ul>
-</div>
+    <?php
+	$html_output = ob_get_contents();
+	ob_end_clean();
+	?>
+    
+    <div class="tab-content listview">
+    	<?php echo $html_output;?>
+    </div>
+    <div class="tab-content galleryview">
+		<?php echo $html_output;?>
+        <div class="clear"></div>
+    </div>
+    <div class="tab-content mapview">
+		<div id="mapview-canvas">Loading Map...</div>
+    </div>
+    <dl class="listing-nav-ordering bottom"> </dl>
+    <script type="text/javascript">
+        //var Listings = eval('(<?=json_encode(GetMapListingData($map_lt, $folder, $office))?>)');
+    </script>
 </form>
+<?php }else{?>
+<p class="error_msg">Search Results: Currently there are no properties that match your search criteria. Please widen your search.</p>
+<?php }?>
+</div>
