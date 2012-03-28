@@ -31,33 +31,33 @@ App::uses('AppController', 'Controller');
  */
 class PagesController extends AppController {
 
-/**
- * Controller name
- *
- * @var string
- */
+	/**
+	 * Controller name
+	 *
+	 * @var string
+	 */
 	public $name = 'Pages';
 
-/**
- * Default helper
- *
- * @var array
- */
+	/**
+	 * Default helper
+	 *
+	 * @var array
+	 */
 	public $helpers = array('Html', 'Session');
 
-/**
- * This controller does not use a model
- *
- * @var array
- */
+	/**
+	 * This controller does not use a model
+	 *
+	 * @var array
+	 */
 	public $uses = array();
 
-/**
- * Displays a view
- *
- * @param mixed What page to display
- * @return void
- */
+	/**
+	 * Displays a view
+	 *
+	 * @param mixed What page to display
+	 * @return void
+	 */
 	public function display() {
 		$path = func_get_args();
 
@@ -79,10 +79,10 @@ class PagesController extends AppController {
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
 		$this->render(implode('/', $path));
 	}
-	
-/**
- * render the home page
- */
+
+	/**
+	 * render the home page
+	 */
 	public function initialization(){
 		$this->set('title_for_layout', 'NSW Properties For Lease - search here for current Sutherland Shire Rental Properties');
 		$this->loadModel('Listing');
@@ -92,11 +92,31 @@ class PagesController extends AppController {
 				'Listing.office_id' => array('1'),
 				'Listing.lt_status NOT IN (6,1,7,10)',
 				'Listing.lt_hvset & '.pow(2,14).'='.pow(2,14),
-			),
+		),
 			'order' => array('Listing.last_mod DESC'),
 			'limit' => 2
 		);
 		$fp_lt = $this->Listing->find('all', $condition);
+
+		for($i=0;$i<sizeof($fp_lt);$i++){
+			$photo = '';
+			if (($fp_lt[$i]['Listing']['lt_hvset'] & 2)==2){
+				$photo = Router::url('/', true)."media/lt/".$fp_lt[$i]['Listing']['office_id']."/".$fp_lt[$i]['Listing']['lt_uid']."/m-rsc.jpg";
+				if (round($fp_lt[$i]['Listing']['lt_hvset'] & pow(2, 17))==pow(2, 17)){
+					$photo = Router::url('/', true)."media/lt/".$fp_lt[$i]['Listing']['office_id']."/".$fp_lt[$i]['Listing']['lt_uid']."/cm-rsc.jpg";
+				}
+			}
+			$fp_lt[$i]['Listing']['photo_path'] = $photo;
+			
+			$address = $fp_lt[$i]['Listing']['address'].', ';
+			if (round($fp_lt[$i]['Listing']['lt_hvset'] & pow(2,12))==pow(2,12))
+				$address = '';
+			$address .= ucwords(strtolower($fp_lt[$i]['Listing']['suburb_name']));
+			$fp_lt[$i]['Listing']['web_address'] = $address;
+			
+			$price = (round($fp_lt[$i]['Listing']['lt_hvset'] & pow(2,7))==pow(2,7))?$fp_lt[$i]['Listing']['disp_rent']:$fp_lt[$i]['Listing']['disp_price'];
+			$fp_lt[$i]['Listing']['web_price'] = $price;
+		}
 		$this->set('featureProperties', $fp_lt);
 	}
 }

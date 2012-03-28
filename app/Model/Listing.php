@@ -32,6 +32,13 @@ class Listing extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
+		),
+		'ExLtRecord' => array(
+			'className' => 'ExLtRecord',
+			'foreignKey' => 'lt_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 	);
 }

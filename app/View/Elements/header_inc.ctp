@@ -19,13 +19,13 @@
 	);
 ?>
 <title><?php echo $title_for_layout?></title>
-<?php echo $this->Html->css(array('reset', 'global', 'menu_base', 'jquery.autocomplete', 'home')); ?>
+<?php echo $this->Html->css(array('reset', 'global', 'menu_base', 'jquery.autocomplete')); ?>
 <script type="text/javascript">
 	var SITE_PATH = '<?php echo Router::url('/', true);?>';
 	var WSID = '664b6819212c3fa5e316587d6695aed7';
 	var start_idx = 0;
 </script>
-<?php echo $this->Html->script(array('jquery.min', 'actions', 'jquery.autocomplete', 'home', 'jquery.cycle.lite.min')); ?>
+<?php echo $this->Html->script(array('jquery.min', 'actions', 'jquery.autocomplete', 'jquery.cycle.lite.min')); ?>
 <!--[if lte IE 8]>
         <?php echo $this->Html->css('globalIE8'); ?>
 	<![endif]-->

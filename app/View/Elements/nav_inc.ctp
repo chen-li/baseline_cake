@@ -3,8 +3,7 @@
         <li class="home"><a href="<?php echo Router::url('/', true);?>">Home</a></li>
         <li class="buying"><a href="javascript:;" rel="buying">Buying </a>
           <ul>
-            <li><a href="<?php echo Router::url('/', true);?>buying/listings.php">Properties for Sale</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>buying/buying-new-listings.php">New Listings</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>Listings/residential">Properties for Sale</a></li>
             <li><a href="<?php echo Router::url('/', true);?>buying/residential-listings.php">Residential for Sale</a></li>
             <li><a href="<?php echo Router::url('/', true);?>buying/land-listings.php">Land for Sale</a></li>
             <li><a href="<?php echo Router::url('/', true);?>buying/commercial-listings.php">Commercial for Sale</a></li>
