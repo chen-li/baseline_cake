@@ -25,7 +25,7 @@
 	var WSID = '664b6819212c3fa5e316587d6695aed7';
 	var start_idx = 0;
 </script>
-<?php echo $this->Html->script(array('jquery.min', 'actions', 'jquery.autocomplete', 'jquery.cycle.lite.min')); ?>
+<?php echo $this->Html->script(array('jquery.min', 'actions', 'jquery.autocomplete')); ?>
 <!--[if lte IE 8]>
         <?php echo $this->Html->css('globalIE8'); ?>
 	<![endif]-->
@@ -34,7 +34,7 @@
 	<![endif]-->
 </head>
 
-<body class="home listings">
+<body class="<?php echo $bodyClass;?>">
 <?php echo $this->element('sql_dump'); ?>
 <input type="hidden" id="folder_name" value="" />
 <input type="hidden" id="request_uri" value="index.php" />

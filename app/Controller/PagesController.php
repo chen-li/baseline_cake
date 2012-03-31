@@ -92,7 +92,7 @@ class PagesController extends AppController {
 				'Listing.office_id' => array('1'),
 				'Listing.lt_status NOT IN (6,1,7,10)',
 				'Listing.lt_hvset & '.pow(2,14).'='.pow(2,14),
-		),
+			),
 			'order' => array('Listing.last_mod DESC'),
 			'limit' => 2
 		);
@@ -118,5 +118,6 @@ class PagesController extends AppController {
 			$fp_lt[$i]['Listing']['web_price'] = $price;
 		}
 		$this->set('featureProperties', $fp_lt);
+		$this->set('bodyClass', 'home');
 	}
 }

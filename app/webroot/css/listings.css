@@ -37,13 +37,16 @@ body.listings #content .listing-nav-ordering .page-numbers a {
 body.listings #content .listing-nav-ordering .page-numbers a:hover {
 	text-decoration:none;
 }
-body.listings #content .listing-nav-ordering .page-numbers strong, body.listings #content .listing-nav-ordering .page-numbers a:hover {
+body.listings #content .listing-nav-ordering .page-numbers .current, body.listings #content .listing-nav-ordering .page-numbers a:hover  {
 	display:inline-block;
 	border:1px solid #019aa6;
 	padding:4px 5px;
 	margin-right:4px; 
 	background: #019aa6;
 	color:#FFF;
+}
+body.listings #content .listing-nav-ordering .page-numbers .disabled{
+	display:none;
 }
 body.listings #content .listing-nav-ordering .order-by {
 	float:right;

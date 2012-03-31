@@ -1,4 +1,4 @@
-<?php echo $this->Html->script(array('tabs', 'jquery.lazyload', 'jquery.fancybox', 'mapv3', 'http://maps.google.com/maps/api/js?sensor=false&region=AU', 'listings')); ?>
+<?php echo $this->Html->script(array('tabs', 'jquery.fancybox', 'http://maps.google.com/maps/api/js?sensor=false&amp;region=AU', 'mapv3', 'listings', 'jquery.lazyload')); ?>
 <?php echo $this->Html->css(array('tabs', 'jquery.fancybox', 'listings', 'fancyforms')); ?>
 <h1><?php echo $search_title;?></h1>
 <div class="tab-container">
@@ -12,11 +12,43 @@
 		<li><a name="galleryview" rel="show|#print_list|#print_prop|.page-numbers|.page-records|.order-by" href="#">Gallery View</a></li>
 		<li><a name="mapview" rel="hide|#print_list|#print_prop|.page-numbers|.page-records|.order-by|mapView" href="#">Map View</a></li>
 	</ul>
-	
+    
 	<!-- start page navigation -->
 	<dl class="listing-nav-ordering">
+	<?php ob_start();?>
+      <dd class="found">
+		<?php echo $this->Paginator->counter(array('format'=>'{:count}')); ?> properties found
+        <span class="page-records"> - 
+		<?php echo $this->Paginator->counter(array('format'=>'Page {:page} of {:pages}')); ?>
+        </span>
+      </dd>
+      <dd class="order-by">
+        <select name="order_by" class="" onchange="window.location = '<?php echo '/'.$this->name.'/'.$this->action;?>'+this.value;">
+            <option value="">Order By</option>
+            <option value="/sort:last_mod/direction:desc">Last Updated</option>
+            <option value="/sort:listing_date/direction:asc">Listing Date</option>
+            <option value="/sort:price/direction:desc">Price: Highest to Lowest</option>
+            <option value="/sort:price/direction:asc">Price: Lowest to Highest</option>
+            <option value="/sort:suburb_name/direction:asc">Suburb: A-Z</option>
+            <option value="/sort:suburb_name/direction:desc">Suburb: Z-A</option>
+            <option value="/sort:bed/direction:asc">Bedrooms</option>
+            <option value="/sort:bath/direction:asc">Bathrooms</option>
+        </select>
+      </dd>
+      <dd class="page-numbers">
+      	<?php echo $this->Paginator->prev('« Previous', null, null, array('class' => 'disabled prev')); ?>
+		<?php echo $this->Paginator->numbers(array('separator' => '')); ?>
+		<?php //echo $this->CustomPaginator->numbers(); ?>
+		<?php echo $this->Paginator->next('Next »', null, null, array('class' => 'disabled next')); ?>
+      </dd>
+	<?php $page_order = ob_get_contents();
+    ob_end_clean();
+    ?>
+    <?php echo $page_order;?>
 	</dl>
 	<!-- end page navigation -->
+    
+    
 	<?php ob_start();?>
 	<ul>
 	<?php
@@ -135,9 +167,9 @@
     <div class="tab-content mapview">
 		<div id="mapview-canvas">Loading Map...</div>
     </div>
-    <dl class="listing-nav-ordering bottom"> </dl>
+    <dl class="listing-nav-ordering bottom"><?php echo $page_order;?></dl>
     <script type="text/javascript">
-        //var Listings = eval('(<?=json_encode(GetMapListingData($map_lt, $folder, $office))?>)');
+        var Listings = eval('(<?php echo json_encode($GetMapListingData);?>)');
     </script>
 </form>
 <?php }else{?>

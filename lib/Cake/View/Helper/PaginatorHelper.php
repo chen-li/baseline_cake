@@ -667,7 +667,7 @@ class PaginatorHelper extends AppHelper {
 			'modulus' => '8', 'separator' => ' | ', 'first' => null, 'last' => null, 'ellipsis' => '...', 'currentClass' => 'current'
 		);
 		$options += $defaults;
-
+		
 		$params = (array)$this->params($options['model']) + array('page' => 1);
 		unset($options['model']);
 

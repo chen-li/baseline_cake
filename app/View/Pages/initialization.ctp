@@ -1,4 +1,4 @@
-<?php echo $this->Html->script(array('home')); ?>
+<?php echo $this->Html->script(array('jquery.cycle.lite.min', 'home')); ?>
 <?php echo $this->Html->css(array('home')); ?>
 
 <div id="left">

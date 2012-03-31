@@ -41,4 +41,40 @@ class Listing extends AppModel {
 			'order' => ''
 		)
 	);
+	
+/**
+ * belongsTo associations
+ *
+ * @var array
+ */
+	public $belongsTo = array(
+		'Office' => array(
+			'className' => 'Office',
+			'foreignKey' => 'office_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'State' => array(
+			'className' => 'State',
+			'foreignKey' => 'state_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'Region' => array(
+			'className' => 'Region',
+			'foreignKey' => 'region_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'Suburb' => array(
+			'className' => 'Suburb',
+			'foreignKey' => 'suburb_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+	);
 }
