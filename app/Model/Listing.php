@@ -77,4 +77,29 @@ class Listing extends AppModel {
 			'order' => ''
 		),
 	);
+	
+/**
+ * hasAndBelongsToMany associations
+ *
+ * @var array
+ */
+	
+	public $hasAndBelongsToMany = array(
+		'Member' =>
+			array(
+				'className' => 'Member',
+				'joinTable' => 'lt_mem',
+				'foreignKey' => 'lt_id',
+				'associationForeignKey' => 'mem_id',
+				'unique' => true,
+				'conditions' => '',
+				'fields' => '',
+				'order' => '',
+				'limit' => '',
+				'offset' => '',
+				'finderQuery' => '',
+				'deleteQuery' => '',
+				'insertQuery' => ''
+			)
+	);
 }
