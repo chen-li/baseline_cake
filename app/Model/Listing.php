@@ -11,6 +11,10 @@ App::uses('AppModel', 'Model');
  * @property State $State
  */
 class Listing extends AppModel {
+	
+	var $actsAs = array('Containable');
+	
+	
 /**
  * Primary key field
  *
@@ -28,6 +32,13 @@ class Listing extends AppModel {
 	public $hasMany = array(
 		'LtPhoto' => array(
 			'className' => 'LtPhoto',
+			'foreignKey' => 'lt_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'LtInsp' => array(
+			'className' => 'LtInsp',
 			'foreignKey' => 'lt_id',
 			'conditions' => '',
 			'fields' => '',
@@ -51,6 +62,13 @@ class Listing extends AppModel {
 		'Office' => array(
 			'className' => 'Office',
 			'foreignKey' => 'office_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'PCatg' => array(
+			'className' => 'PCatg',
+			'foreignKey' => 'lt_catg',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

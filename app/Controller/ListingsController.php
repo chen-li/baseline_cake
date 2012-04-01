@@ -162,6 +162,34 @@ class ListingsController extends AppController {
 		$this->set('bodyClass', 'listings');
 		$this->render('listings');
 	}
+	
+/*
+ * details page
+ */
+	public function details($lt_uid = null){
+		$condition = array(
+			'conditions' => array(
+				'Listing.lt_uid' => $lt_uid,
+			),
+			'contain' => array(
+				'LtInsp' => array('conditions' => array('LtInsp.insp_start > NOW()')),
+				'LtPhoto',
+				'LtInsp',
+				'ExLtRecord',
+				'Member',
+				'Office',
+				'State',
+				'Suburb',
+				'Region',
+				'PCatg',
+			)
+		);
+	    if ($this->request->is('get')) {
+	        $lt = $this->Listing->find('first', $condition);
+	    }
+	    $this->set('lt', $lt);
+		$this->set('bodyClass', 'details');		
+	}
 
 /*
  * never render the views

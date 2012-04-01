@@ -99,7 +99,7 @@
 			
 		$photo = Router::url('/', true).'img/galleryview_nophoto.gif';
 		if(is_array($lt['LtPhoto']) && sizeof($lt['LtPhoto'])){
-			$photo = Router::url('/', true)."media/lt/".$lt['Listing']['office_id']."/".$lt['Listing']['lt_uid']."/".$lt['LtPhoto'][0]['photo_loc'];
+			$photo = Router::url('/', true)."media/lt/".$lt['Listing']['office_id']."/".$lt['Listing']['lt_uid']."/".eregi_replace(".jpg", "-rsb.jpg", $lt['LtPhoto'][0]['photo_loc']);
 		}
 		
 		$bbc = array();
@@ -112,11 +112,13 @@
 		if($lt['Listing']['car']) {
 			$bbc['car'] = '<img src="'.Router::url('/', true).'img/car.png" alt="car" /> '.$lt['Listing']['car'];
 		}
+		
+		$details_link = Router::url('/', true).'Listings/details/'.$lt['Listing']['lt_uid'];
 	?>
 	<li class="<?php echo $hv_shade;?>">
         <div class="photo box-shadow">
             <div class="status <?php echo $status_class;?>" ><img src="<?php echo Router::url('/', true);?>img/<?php echo $status_img_name;?>.png" alt="<?php echo $status_class;?>" width="67" /></div>
-            <a href=""><img src="<?php echo $photo;?>" alt="<?php echo $lt['Listing']['address'];?>" width="205" border="0" title="<?php echo $lt['Listing']['address'];?><?php echo ucwords(strtolower($lt['Listing']['suburb_name']));?>" /></a>
+            <a href="<?php echo $details_link;?>"><img src="<?php echo $photo;?>" alt="<?php echo $lt['Listing']['address'];?>" width="205" border="0" title="<?php echo $lt['Listing']['address'];?><?php echo ucwords(strtolower($lt['Listing']['suburb_name']));?>" /></a>
         </div>
         <div class="info">
             <div class="basic">
@@ -143,7 +145,7 @@
                     </label></li>
                     <? }?>
                     <li><a href="<?php echo $bookmark_link;?>" class="bookmark"><span class="icon bookmark"></span>Bookmark Property</a></li>-->
-                    <li><a href="<?php //echo $details_link;?>"><span class="icon view"></span>View More Details</a></li>
+                    <li><a href="<?php echo $details_link;?>"><span class="icon view"></span>View More Details</a></li>
                 </ul>
             </div>
         </div>
