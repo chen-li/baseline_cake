@@ -7,19 +7,16 @@
             <li><a href="<?php echo Router::url('/', true);?>Listings/index/residential/buying">Residential for Sale</a></li>
             <li><a href="<?php echo Router::url('/', true);?>Listings/index/land/buying">Land for Sale</a></li>
             <li><a href="<?php echo Router::url('/', true);?>Listings/index/commercial/buying">Commercial for Sale</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>buying/open-homes.php">Open Homes</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>buying/auctions.php">Auction Timetable</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>LtInsps/inspection">Open Homes</a></li>
             <li><a href="<?php echo Router::url('/', true);?>buying/buying-tips.php">Buying Tips</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>buying/property-alert.php">Property Alert</a></li>
+            <!--<li><a href="<?php echo Router::url('/', true);?>buying/property-alert.php">Property Alert</a></li>-->
           </ul>
         </li>
         <li class="selling"><a href="javascript:;" rel="selling">Selling </a>
           <ul>
             <li><a href="<?php echo Router::url('/', true);?>selling/selling-tips.php">Selling Tips</a></li>
             <li><a href="<?php echo Router::url('/', true);?>selling/market-appraisal.php">Market Appraisal</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>selling/commercial-market-appraisal.php">Commercial Market Appraisal</a></li>
             <li><a href="<?php echo Router::url('/', true);?>Listings/index/buying/status:2">Recent Sales</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>selling/selling-testimonials.php">Testimonials</a></li>
           </ul>
         </li>
         <li class="renting"><a href="javascript:;" rel="renting">Renting </a>
