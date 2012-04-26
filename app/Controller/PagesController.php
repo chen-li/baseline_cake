@@ -81,7 +81,8 @@ class PagesController extends AppController {
 	}
 
 	/**
-	 * render the home page
+	 * show the home page
+	 * @return void
 	 */
 	public function initialization(){
 		$this->set('title_for_layout', 'NSW Properties For Lease - search here for current Sutherland Shire Rental Properties');
@@ -96,6 +97,7 @@ class PagesController extends AppController {
 			'order' => array('Listing.last_mod DESC'),
 			'limit' => 2
 		);
+		//show featured property
 		$fp_lt = $this->Listing->find('all', $condition);
 
 		for($i=0;$i<sizeof($fp_lt);$i++){
@@ -119,5 +121,92 @@ class PagesController extends AppController {
 		}
 		$this->set('featureProperties', $fp_lt);
 		$this->set('bodyClass', 'home');
+		$this->set('quickSearch', $this->quickSearch());
+	}
+	
+	/**
+	 * collect the info of the categories and the suburbs for the 4 options in the quick search form
+	 * @return array
+	 */
+	public function quickSearch(){
+		$select_buying = $this->catgSearch('available','buying');
+		$select_renting = $this->catgSearch('available','renting');
+		$select_sold = $this->catgSearch('sold','buying');
+		$select_leased = $this->catgSearch('leased','renting');
+		$qs = array();
+		$qs['buy'] = $this->catgSuburbOption($select_buying);
+		$qs['rent'] = $this->catgSuburbOption($select_renting);
+		$qs['sold'] = $this->catgSuburbOption($select_sold);
+		$qs['leased'] = $this->catgSuburbOption($select_leased);
+		//pr($qs);
+		return $qs;
+	}
+	
+	/**
+	 * count the categories and suburbs for the quick search form
+	 * @param array $selection
+	 * @return array
+	 */
+	public function catgSuburbOption($selection){
+		$catg = array();
+		$suburb = array();
+		foreach($selection as $sel){
+			if(!array_key_exists($sel['PCatg']['pcatg_id'], $catg)){
+				$catg[$sel['PCatg']['pcatg_id']] = $sel['PCatg']['pcatg_name'];
+			}
+			if(!array_key_exists($sel['Suburb']['suburb_id'], $suburb)){
+				$suburb[$sel['Suburb']['suburb_id']] = $sel['Suburb']['suburb_name'];
+			}
+		}
+		return array('catg'=>$catg, 'suburb'=>$suburb);
+	}
+	
+	/**
+	 * collect the info of categories which are for sale, for rent, for sold and for leased
+	 * @param $status
+	 * @param $sale_type
+	 * @return array
+	 */
+	public function catgSearch($status,$sale_type){
+		$condition = array(
+			'fields' => array('PCatg.pcatg_name', 'PCatg.pcatg_id', 'Suburb.suburb_id', 'Suburb.suburb_name'),
+			'conditions' => $this->quickSearchCriteria($status, $sale_type)
+		);
+		return $this->Listing->find('all', $condition);
+	}
+	
+	/**
+	 * setup the search criteria for quick search form
+	 * @param string|int $status
+	 * @param string $sale_type
+	 * @return array
+	 */
+	public function quickSearchCriteria($status,$sale_type='buying'){
+		$cond = array();
+		
+		switch($status){
+			case 'sold':
+				$cond[] = 'Listing.lt_status IN (2)';
+				break;
+			case 'leased':
+				$cond[] = 'Listing.lt_status IN (3)';
+				break;
+			default:
+				$cond[] = 'Listing.lt_status IN (0,4,8,9)';
+		}
+		
+		switch($sale_type){
+			case 'renting':
+				$cond[] = 'Listing.lt_hvset & '.pow(2,7).'='.pow(2,7);
+				break;
+			case 'buying':
+			default:
+				$cond[] = 'Listing.lt_hvset & '.pow(2,6).'='.pow(2,6);
+		}
+		
+		$cond[] = 'Listing.office_id IN (1)';
+		$cond[] = 'Listing.db_status = 0';
+		
+		return $cond;
 	}
 }

@@ -26,7 +26,7 @@ class PCatg extends AppModel {
 	public $hasMany = array(
 		'Listing' => array(
 			'className' => 'Listing',
-			'foreignKey' => 'pcatg_id',
+			'foreignKey' => 'lt_catg',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

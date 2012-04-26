@@ -4,9 +4,9 @@
         <li class="buying"><a href="javascript:;" rel="buying">Buying </a>
           <ul>
             <li><a href="<?php echo Router::url('/', true);?>Listings/index">Properties for Sale</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>Listings/residential">Residential for Sale</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>Listings/land">Land for Sale</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>Listings/commercial">Commercial for Sale</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>Listings/index/residential/buying">Residential for Sale</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>Listings/index/land/buying">Land for Sale</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>Listings/index/commercial/buying">Commercial for Sale</a></li>
             <li><a href="<?php echo Router::url('/', true);?>buying/open-homes.php">Open Homes</a></li>
             <li><a href="<?php echo Router::url('/', true);?>buying/auctions.php">Auction Timetable</a></li>
             <li><a href="<?php echo Router::url('/', true);?>buying/buying-tips.php">Buying Tips</a></li>
@@ -18,15 +18,15 @@
             <li><a href="<?php echo Router::url('/', true);?>selling/selling-tips.php">Selling Tips</a></li>
             <li><a href="<?php echo Router::url('/', true);?>selling/market-appraisal.php">Market Appraisal</a></li>
             <li><a href="<?php echo Router::url('/', true);?>selling/commercial-market-appraisal.php">Commercial Market Appraisal</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>selling/recent-sales.php">Recent Sales</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>Listings/index/buying/status:2">Recent Sales</a></li>
             <li><a href="<?php echo Router::url('/', true);?>selling/selling-testimonials.php">Testimonials</a></li>
           </ul>
         </li>
         <li class="renting"><a href="javascript:;" rel="renting">Renting </a>
           <ul>
-            <li><a href="<?php echo Router::url('/', true);?>renting/rental-listings.php">Properties for Lease</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>renting/residential-rental-listings.php">Residential for Lease</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>renting/commercial-lease-listings.php">Commercial for Lease</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>Listings/index/renting">Properties for Lease</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>Listings/index/residential/renting">Residential for Lease</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>Listings/index/commercial/renting">Commercial for Lease</a></li>
             <li><a href="<?php echo Router::url('/', true);?>renting/guide-renting.php">Guide to Renting</a></li>
             <li><a href="<?php echo Router::url('/', true);?>renting/rental-application.php">Tenancy Application</a></li>
             <li><a href="<?php echo Router::url('/', true);?>renting/request-maintenance.php">Maintenance Request</a></li>

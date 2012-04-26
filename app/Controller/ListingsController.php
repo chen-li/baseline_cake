@@ -6,166 +6,154 @@ App::uses('AppController', 'Controller');
  */
 class ListingsController extends AppController {
 	
-/*	var $paginate=array(
-    'Game'=>
-	array(
-        'joins'=>array(
-	array('table'=>'competitions',
-                  'alias'=>'Competition2',
-                  'type'=>'left',
-                  'conditions'=>array('Game.competition_id=Competition2.competition_id')
-	),
-	array('table'=>'teams',
-                  'alias'=>'Team2',
-                  'type'=>'left',
-                  'conditions'=>array('Competition2.team_id=Team2.team_id')
-	),
-	),
-        'order'=>array('game_date'=>'asc'),
-        'contains'=>array('Competition2'=>array('Team2'))
-	));
-	function index() {
-		$datum = date('Y-m-d H:m');
-		$this->Game->recursive = 0;
-		$scope=array('OR' => array(array('Team2.sport_id' => 2), array('Team2.sport_id' =>3)), 'Game.game_date >' => $datum);
-		//       Configure::write('debug',2);
-		$this->set('games', $this->paginate(null,$scope));
-	}*/
-	
 	public $paginate;
 	public $helpers = array('HTML', 'session', 'Paginator');
 	
-/*
- * Listing index page
- */
-	
+	/**
+	 * the listings page which shows all the properties according to the search criteria
+	 * @param $sale_type
+	 * @return void
+	 */
 	public function index() {
 		$this->paginate = array(
 				'limit' => 6,
 				'order' => 'Listing.last_mod DESC'
 		);
-		$cond = array(
-			'Listing.db_status = 0',
-			'Listing.office_id IN (1)',
-			'Listing.lt_status IN (0,4,8,9)',
-			'Listing.lt_hvset & '.pow(2,6).'='.pow(2,6),
-		);
-		/*
-		if(isset($this->params['named']['sort'])){//user clicked on a "sort by" link, write his choice to the session
-			$this->Session->write('listing_sort', array($this->params['named']['sort']=>$this->params['named']['direction']));
-		} else if($this->Session->check('listing_sort')){
-			$this->paginate['order'] = $this->Session->read('listing_sort');
-		}*/
+		//debug($this->params);
+		$cond = $this->searchCriteria($this->params['pass'], $this->params['named'], $this->params['data']);
 		$lt = $this->paginate('Listing', $cond);
 		$this->getAddress($lt);
 		$this->getListingPrice($lt);
 		$this->set('listings', $lt);
 		$this->set('GetMapListingData', $this->GetMapListingData($lt));
-		$this->set('search_title', 'Property For Sale');
-		$this->set('heading', 'Sale');
+		$this->set('search_title', $this->searchTitle($this->params['pass']));
+		$this->set('heading', $this->pageHeading($this->params['pass']));
 		$this->set('bodyClass', 'listings');
 		$this->render('listings');
 	}
 	
-/*
- *	Residential listings
- */
-	public function residential() {
-		$this->paginate = array(
-				'limit' => 6,
-				'order' => 'Listing.last_mod DESC'
-		);
-		$cond = array(
-			'Listing.db_status = 0',
-			'Listing.office_id IN (1)',
-			'Listing.lt_status IN (0,4,8,9)',
-			'Listing.lt_hvset & '.pow(2,6).'='.pow(2,6),
-			'Listing.lt_trade' => '1'
-		);
+	/**
+	 * setup the search criteria
+	 * @param array $pass 
+	 * @param array $named
+	 * @param array $data
+	 * @return array
+	 */
+	public function searchCriteria($pass, $named, $data){
+		$conditions = array();
+		//check trade type if it is residential or commercial
+		if(in_array('residential', $pass)){
+			$conditions['Listing.lt_trade'] = '1';//1 is residential
+		}
+		if(in_array('commercial', $pass)){
+			$conditions['Listing.lt_trade'] = '2';//2 is commercial
+		}
+		//check if the properties for sale or for rent
+		if(in_array('renting', $pass)){//for rent
+			$conditions[] = 'Listing.lt_hvset & '.pow(2,7).'='.pow(2,7);
+		}else {//for sale
+			$conditions[] = 'Listing.lt_hvset & '.pow(2,6).'='.pow(2,6);
+		}
 		/*
-		if(isset($this->params['named']['sort'])){//user clicked on a "sort by" link, write his choice to the session
-			$this->Session->write('listing_sort', array($this->params['named']['sort']=>$this->params['named']['direction']));
-		} else if($this->Session->check('listing_sort')){
-			$this->paginate['order'] = $this->Session->read('listing_sort');
-		}*/
-		$lt = $this->paginate('Listing', $cond);
-		$this->getAddress($lt);
-		$this->getListingPrice($lt);
-		$this->set('listings', $lt);
-		$this->set('GetMapListingData', $this->GetMapListingData($lt));
-		$this->set('search_title', 'Residential For Sale');
-		$this->set('heading', 'Sale');
-		$this->set('bodyClass', 'listings');
-		$this->render('listings');
-	}
-	
-/*
- *	Commercial listings
- */
-	public function commercial() {
-		$this->paginate = array(
-				'limit' => 6,
-				'order' => 'Listing.last_mod DESC'
-		);
-		$cond = array(
-			'Listing.db_status = 0',
-			'Listing.office_id IN (1)',
-			'Listing.lt_status IN (0,4,8,9)',
-			'Listing.lt_hvset & '.pow(2,6).'='.pow(2,6),
-			'Listing.lt_trade' => '2'
-		);
+		 * db_status:
+		 * 0 active
+		 * 1 deleted
+		 */
+		$conditions[] = 'Listing.db_status = 0';
+		//single office
+		$conditions[] = 'Listing.office_id IN (1)';
 		/*
-		if(isset($this->params['named']['sort'])){//user clicked on a "sort by" link, write his choice to the session
-			$this->Session->write('listing_sort', array($this->params['named']['sort']=>$this->params['named']['direction']));
-		} else if($this->Session->check('listing_sort')){
-			$this->paginate['order'] = $this->Session->read('listing_sort');
-		}*/
-		$lt = $this->paginate('Listing', $cond);
-		$this->getAddress($lt);
-		$this->getListingPrice($lt);
-		$this->set('listings', $lt);
-		$this->set('GetMapListingData', $this->GetMapListingData($lt));
-		$this->set('search_title', 'Commercial For Sale');
-		$this->set('heading', 'Sale');
-		$this->set('bodyClass', 'listings');
-		$this->render('listings');
+		 * lt_status:
+		 * 0 available
+		 * 1 appraisal
+		 * 2 sold
+		 * 3 leased
+		 * 4 deposit taken
+		 * 5 exchanged
+		 * 6 offline
+		 * 7 prospect
+		 * 8 under offer
+		 * 9 under contract
+		 * 10 listing presentation
+		 */
+		if(!isset($named['status'])){
+			$named['status'] = 'default';
+		}
+		switch($named['status']){
+			case '2':
+				$conditions[] = 'Listing.lt_status IN (2)';
+				break;
+			case '3':
+				$conditions[] = 'Listing.lt_status IN (3)';
+				break;
+			default:
+				$conditions[] = 'Listing.lt_status IN (0,4,8,9)';
+		}
+		
+		if(isset($data['price_fm']) && is_numeric($data['price_fm'])){
+			$conditions[] = "Listing.price >='".$data['price_fm']."'";
+		}
+		if(isset($data['price_to']) && is_numeric($data['price_to'])){
+			$conditions[] = "Listing.price <='".$data['price_to']."'";
+		}
+		
+		if(isset($data['bed_fm']) && is_numeric($data['bed_fm'])){
+			$conditions[] = "Listing.bed >='".$data['bed_fm']."'";
+		}
+		if(isset($data['bath_fm']) && is_numeric($data['bath_fm'])){
+			$conditions[] = "Listing.bath >='".$data['bath_fm']."'";
+		}
+		if(isset($data['car_fm']) && is_numeric($data['car_fm'])){
+			$conditions[] = "Listing.car >='".$data['car_fm']."'";
+		}
+		
+		if(isset($data['catg']) && is_array($data['catg']) && sizeof($data['catg'])){
+			$conditions[] = "Listing.lt_catg IN (".implode(",", $data['catg']).")";
+		}
+		
+		if(isset($data['suburbs']) && is_array($data['suburbs']) && sizeof($data['suburbs'])){
+			$conditions[] = "Listing.suburb_id IN (".implode(",", $data['suburbs']).")";
+		}
+		
+		return $conditions;
 	}
 	
-/*
- *	Land listings
- */
-	public function land() {
-		$this->paginate = array(
-				'limit' => 6,
-				'order' => 'Listing.last_mod DESC'
-		);
-		$cond = array(
-			'Listing.db_status = 0',
-			'Listing.office_id IN (1)',
-			'Listing.lt_status IN (0,4,8,9)',
-			'Listing.lt_catg IN (5)',
-			'Listing.lt_hvset & '.pow(2,6).'='.pow(2,6)
-		);
-		/*
-		if(isset($this->params['named']['sort'])){//user clicked on a "sort by" link, write his choice to the session
-			$this->Session->write('listing_sort', array($this->params['named']['sort']=>$this->params['named']['direction']));
-		} else if($this->Session->check('listing_sort')){
-			$this->paginate['order'] = $this->Session->read('listing_sort');
-		}*/
-		$lt = $this->paginate('Listing', $cond);
-		$this->getAddress($lt);
-		$this->getListingPrice($lt);
-		$this->set('listings', $lt);
-		$this->set('GetMapListingData', $this->GetMapListingData($lt));
-		$this->set('search_title', 'Land For Sale');
-		$this->set('heading', 'Sale');
-		$this->set('bodyClass', 'listings');
-		$this->render('listings');
+	/**
+	 * return the page title for the listings page
+	 * @param array $pass
+	 * @return string
+	 */
+	public function searchTitle($pass){
+		if(in_array('residential', $pass)){
+			return 'Residential For Sale';
+		}else if(in_array('commercial', $pass)){
+			return 'Commercial For Sale';
+		}else if(in_array('land', $pass)){
+			return 'Land For Sale';
+		}else{
+			return 'Property For Sale';
+		}
 	}
 	
-/*
- * details page
- */
+	/**
+	 * check the heading of the page if it is for sale or for lease
+	 * @param array $pass
+	 * @return string
+	 */
+	public function pageHeading($pass){
+		if(in_array('renting', $pass)){//for rent
+			return 'Lease';
+		}else {//for sale
+			return 'Sale';
+		}
+	}
+	
+	
+	/**
+	 * show the details page
+	 * @param $lt_uid
+	 * @return void
+	 */
 	public function details($lt_uid = null){
 		$condition = array(
 			'conditions' => array(
@@ -191,10 +179,11 @@ class ListingsController extends AppController {
 		$this->set('bodyClass', 'details');		
 	}
 
-/*
- * never render the views
- */
-	
+	/**
+	 * if bitwise lt_hvset 12 is true, hide the property address from the website
+	 * @param array $listings
+	 * @return void
+	 */
 	public function getAddress(&$listings){
 		for($i=0;$i<sizeof($listings);$i++){
 			$listings[$i]['Listing']['address'] .= ", ";
@@ -204,7 +193,12 @@ class ListingsController extends AppController {
 		}
 		$this->autoRender = false;
 	}
-
+	
+	/**
+	 * show the prices of the listings
+	 * @param $listings
+	 * @return void
+	 */
 	public function getListingPrice(&$listings){
 		for($i=0;$i<sizeof($listings);$i++){
 			if(isset($listings[$i]['ExLtRecord'][0]['ex_val'])){
@@ -232,7 +226,11 @@ class ListingsController extends AppController {
 		$this->autoRender = false;
 	}
 	
-	//todo
+	/**
+	 * mark the properties on the google map
+	 * @param array $listings
+	 * @return array
+	 */
 	public function GetMapListingData($listings) {
 		$map_listing = array();
 		foreach($listings as $i => $lt){
