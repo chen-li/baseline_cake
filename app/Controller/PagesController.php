@@ -281,4 +281,20 @@ class PagesController extends AppController {
 	public function careers(){
 		$this->set('bodyClass', 'cms');
 	}
+	
+	/**
+	 * the cms text page of Privacy Policy
+	 * @return void
+	 */
+	public function privacy(){
+		$this->set('bodyClass', 'cms');
+	}
+	
+	/**
+	 * the cms text page of Sitemap
+	 * @return void
+	 */
+	public function sitemap(){
+		$this->set('bodyClass', 'cms');
+	}
 }
