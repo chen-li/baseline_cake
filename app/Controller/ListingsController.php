@@ -281,6 +281,18 @@ class ListingsController extends AppController {
 	    $this->set('lt', $lt);
 		$this->set('bodyClass', 'details');		
 	}
+	
+	public function brochure($id){
+		if(isset($id)){
+			$data = array('lt_uid'=>$id);
+		}
+		$cond = array(
+			'conditions' => $this->searchCriteria($data)
+		);
+		$lt = $this->Listing->find('first', $cond);
+	    $this->set('lt', $lt);
+		$this->render('brochure', 'Ajax');
+	}
 
 	/**
 	 * if bitwise lt_hvset 12 is true, hide the property address from the website

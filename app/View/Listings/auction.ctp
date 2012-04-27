@@ -21,6 +21,13 @@
 		if($lt['Listing']['car']) {
 			$bbc['car'] = '<img src="'.Router::url('/', true).'img/car.png" alt="car" /> '.$lt['Listing']['car'];
 		}
+		
+		if (!isset($tmp_mth) || $tmp_mth<>date('d M Y', strtotime($lt['Listing']['auction_date']))){ 
+?>
+	<li class="title"><h2><?php echo date('d M Y', strtotime($lt['Listing']['auction_date']));?></h2></li>
+<?php
+			$tmp_mth=date('d M Y', strtotime($lt['Listing']['auction_date']));
+		}
 ?>
     <li>
     <p class="photo box-shadow"> <a href="<?php echo $details_link;?>"><img src="<?php echo $photo;?>" alt="<?php echo $address;?>" border="0" /> </a> </p>

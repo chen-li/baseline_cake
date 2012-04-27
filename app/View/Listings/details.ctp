@@ -27,7 +27,7 @@
 
 <div class="tools">
 	<ul class="links">
-		<li><a href="<?php echo Router::url('/', true);?>brochure/<?php echo $lt['Listing']['lt_uid']?>" target="_blank"><span class="icon print"></span>Print This Property</a></li>
+		<li><a href="<?php echo Router::url('/', true);?>Listings/brochure/<?php echo $lt['Listing']['lt_uid']?>" target="_blank"><span class="icon print"></span>Print This Property</a></li>
 	</ul>
 	<p class="back"><a href="<?php echo $_SERVER['HTTP_REFERER'];?>">&laquo; Back to results</a></p>
 	<div class="clear"></div>
