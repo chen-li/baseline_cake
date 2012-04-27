@@ -291,7 +291,7 @@ class ListingsController extends AppController {
 		);
 		$lt = $this->Listing->find('first', $cond);
 	    $this->set('lt', $lt);
-		$this->render('brochure', 'Ajax');
+		$this->render('brochure', 'ajax');
 	}
 
 	/**
