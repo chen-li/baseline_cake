@@ -209,4 +209,76 @@ class PagesController extends AppController {
 		
 		return $cond;
 	}
+	
+	/**
+	 * the cms text page of Buying Tips
+	 * @return void
+	 */
+	public function buyingTips(){
+		$this->set('bodyClass', 'cms');
+	}
+	
+	/**
+	 * the cms text page of Selling Tips
+	 * @return void
+	 */
+	public function sellingTips(){
+		$this->set('bodyClass', 'cms');
+	}
+	
+	/**
+	 * the cms text page of Guide To Renting
+	 * @return void
+	 */
+	public function guideToRenting(){
+		$this->set('bodyClass', 'cms');
+	}
+	
+	/**
+	 * the cms text page of Useful Links
+	 * @return void
+	 */
+	public function usefulLinks(){
+		$this->set('bodyClass', 'cms');
+	}
+	
+	/**
+	 * the cms text page of Calculators
+	 * @return void
+	 */
+	public function calculators(){
+		$this->set('bodyClass', 'cms calculator');
+	}
+	
+	/**
+	 * the cms text page of Newsletters
+	 * @return void
+	 */
+	public function newsletters(){
+		$this->set('bodyClass', 'cms');
+	}
+	
+	/**
+	 * the cms text page of Company Profile
+	 * @return void
+	 */
+	public function companyProfile(){
+		$this->set('bodyClass', 'cms');
+	}
+	
+	/**
+	 * the cms text page of Testimonials
+	 * @return void
+	 */
+	public function testimonials(){
+		$this->set('bodyClass', 'cms');
+	}
+	
+	/**
+	 * the cms text page of Careers
+	 * @return void
+	 */
+	public function careers(){
+		$this->set('bodyClass', 'cms');
+	}
 }

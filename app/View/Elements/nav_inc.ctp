@@ -9,13 +9,13 @@
             <li><a href="<?php echo Router::url('/', true);?>Listings/index/commercial/buying">Commercial for Sale</a></li>
             <li><a href="<?php echo Router::url('/', true);?>LtInsps/inspection">Open Homes</a></li>
             <li><a href="<?php echo Router::url('/', true);?>Listings/auction">Auction Timetables</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>buying/buying-tips.php">Buying Tips</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>Pages/buyingTips">Buying Tips</a></li>
             <!--<li><a href="<?php echo Router::url('/', true);?>buying/property-alert.php">Property Alert</a></li>-->
           </ul>
         </li>
         <li class="selling"><a href="javascript:;" rel="selling">Selling </a>
           <ul>
-            <li><a href="<?php echo Router::url('/', true);?>selling/selling-tips.php">Selling Tips</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>Pages/sellingTips">Selling Tips</a></li>
             <li><a href="<?php echo Router::url('/', true);?>selling/market-appraisal.php">Market Appraisal</a></li>
             <li><a href="<?php echo Router::url('/', true);?>Listings/index/buying/status:2">Recent Sales</a></li>
           </ul>
@@ -25,8 +25,8 @@
             <li><a href="<?php echo Router::url('/', true);?>Listings/index/renting">Properties for Lease</a></li>
             <li><a href="<?php echo Router::url('/', true);?>Listings/index/residential/renting">Residential for Lease</a></li>
             <li><a href="<?php echo Router::url('/', true);?>Listings/index/commercial/renting">Commercial for Lease</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>renting/guide-renting.php">Guide to Renting</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>renting/rental-application.php">Tenancy Application</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>Pages/guideToRenting">Guide to Renting</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>Offices/tenancyApplication">Tenancy Application</a></li>
             <li><a href="<?php echo Router::url('/', true);?>renting/request-maintenance.php">Maintenance Request</a></li>
             <li><a href="<?php echo Router::url('/', true);?>renting/lease-appraisal.php">Lease Appraisal</a></li>
 			<li><a href="<?php echo Router::url('/', true);?>renting/vacate-notice.php">Vacate Notice</a></li>
@@ -34,21 +34,20 @@
         </li>
         <li class="useful-info"><a href="javascript:;" rel="useful-info">Resources </a>
           <ul>
-            <li><a href="<?php echo Router::url('/', true);?>useful-info/useful-links.php">Useful Links</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>useful-info/finance-calculator.php">Calculators</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>useful-info/newsletters.php">Newsletters</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>Pages/usefulLinks">Useful Links</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>Pages/calculators">Calculators</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>Pages/newsletters">Newsletters</a></li>
           </ul>
         </li>
         <li class="about"><a href="javascript:;" rel="about">About Us </a>
           <ul>
-            <li><a href="<?php echo Router::url('/', true);?>about/company-profile.php">Company Profile</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>Pages/companyProfile">Company Profile</a></li>
             <li><a href="<?php echo Router::url('/', true);?>about/our-team.php">Meet the Team</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>about/company-testimonials.php">Testimonials</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>about/careers.php">Careers</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>Pages/testimonials">Testimonials</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>Pages/careers">Careers</a></li>
           </ul>
         </li>
         <li class="contact"><a href="<?php echo Router::url('/', true);?>contact/contact-us.php">Contact Us</a></li>
-        <li class="login"><!--<span id="login-bar">-->
-<!--<a href="<?php echo Router::url('/', true);?>buying/property-alert.php">Register</a> &nbsp; | &nbsp; --><a href="<?php echo Router::url('/', true);?>buying/property-alert.php">Login</a>
-<!--</span>--></li>
+        <!--<li class="login"><a href="<?php echo Router::url('/', true);?>buying/property-alert.php">Login</a>-->
+		</li>
       </ul>
