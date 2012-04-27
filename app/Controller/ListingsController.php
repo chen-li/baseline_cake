@@ -32,6 +32,10 @@ class ListingsController extends AppController {
 		$this->render('listings');
 	}
 	
+	/**
+	 * show the Auction Timetables page
+	 * @return void
+	 */
 	public function auction(){
 		$data = array('auction_date'=>time());
 		$cond = array(
@@ -40,6 +44,72 @@ class ListingsController extends AppController {
 		$lt = $this->Listing->find('all', $cond);
 		$this->set('listings', $lt);
 		$this->set('bodyClass', 'inspections');
+	}
+	
+	/**
+	 * return the info to establish the dropdown menu of the autocomplete function
+	 * @return void
+	 */
+	public function fastSearch(){
+		$this->autoRender = false;
+		if(isset($this->params->query['query']) && strlen($this->params->query['query'])>=3){
+			$keyword = $this->params->query['query'];
+			
+			if(eregi("[0-9]+P[0-9]*$", $keyword)){
+				$keyfield = "lt_uid";
+				$data['lt_uid'] = $keyword;
+				$cond = array(
+					'fields' => array(
+						'Listing.lt_uid as result',
+						'Listing.lt_id as id'
+					),
+					'conditions' => $this->searchCriteria($data),
+					'order' => 'Listing.lt_uid'
+				);
+				$results = $this->Listing->find('all', $cond);
+			}else {
+				$keyfield = "suburb_name";
+				$data['suburbs'] = $keyword;
+				$cond = array(
+					'fields' => array(
+						'Listing.suburb_name as result',
+						'Listing.suburb_id as id'
+					),
+					'conditions' => $this->searchCriteria($data),
+					'order' => 'Listing.suburb_name'
+				);
+				$results = $this->Listing->find('all', $cond);
+			}
+			
+			$chk_keyword = $this->fastSearchOption($results);
+			$found = array(
+				'query'=>$keyword,
+				'suggestions'=>$chk_keyword['result'],
+				'data'=>$chk_keyword['id']
+			);
+		}
+		
+		header('Content-type: application/json');
+		echo json_encode($found);
+	}
+	
+	/**
+	 * count the results for the fast search form
+	 * @param array $selection
+	 * @return array
+	 */
+	public function fastSearchOption($selection){
+		$result = array();
+		$id = array();
+		$i = 0;
+		foreach($selection as $sel){
+			if(!array_key_exists($sel['Listing']['result'], $result)){
+				$result[$sel['Listing']['result']] = $i;
+				$id[$sel['Listing']['id']] = $i;
+				$i++;
+			}
+		}
+		return array('result'=>array_flip($result), 'id'=>array_flip($id));
 	}
 	
 	/**
@@ -99,35 +169,54 @@ class ListingsController extends AppController {
 			default:
 				$conditions[] = 'Listing.lt_status IN (0,4,8,9)';
 		}
-		
+		//price from
 		if(isset($data['price_fm']) && is_numeric($data['price_fm'])){
 			$conditions[] = "Listing.price >='".$data['price_fm']."'";
 		}
+		//price to
 		if(isset($data['price_to']) && is_numeric($data['price_to'])){
 			$conditions[] = "Listing.price <='".$data['price_to']."'";
 		}
-		
+		//search bed
 		if(isset($data['bed_fm']) && is_numeric($data['bed_fm'])){
 			$conditions[] = "Listing.bed >='".$data['bed_fm']."'";
 		}
+		//search bath
 		if(isset($data['bath_fm']) && is_numeric($data['bath_fm'])){
 			$conditions[] = "Listing.bath >='".$data['bath_fm']."'";
 		}
+		//search car
 		if(isset($data['car_fm']) && is_numeric($data['car_fm'])){
 			$conditions[] = "Listing.car >='".$data['car_fm']."'";
 		}
-		
+		//search categroy
 		if(isset($data['catg']) && is_array($data['catg']) && sizeof($data['catg'])){
 			$conditions[] = "Listing.lt_catg IN (".implode(",", $data['catg']).")";
 		}
-		
+		//search suburbs
 		if(isset($data['suburbs']) && is_array($data['suburbs']) && sizeof($data['suburbs'])){
 			$conditions[] = "Listing.suburb_id IN (".implode(",", $data['suburbs']).")";
 		}
-		
+		//search the properties for auction
 		if(isset($data['auction_date']) && is_numeric($data['auction_date'])){
 			$conditions[] = "unix_timestamp(Listing.auction_date) >= '".$data['auction_date']."'";
 		}
+		//wild search property id
+		if(isset($data['lt_uid'])){
+			$conditions[] = "Listing.lt_uid LIKE '%".$data['lt_uid']."%'";
+		}
+		//wild search suburb id
+		if(isset($data['suburbs'])){
+			$conditions[] = "Listing.suburb_name LIKE '%".$data['suburbs']."%'";
+		}
+		
+		//fast search property id or suburb id
+		if(isset($data['Keyword']) && (eregi("[0-9]+P[0-9]*$", $data['Keyword'])) && isset($data['suburb_id'])){//search by property id
+			$conditions[] = "Listing.lt_id IN (".$data['suburb_id'].")";
+		}else if(isset($data['Keyword']) && !(eregi("[0-9]+P[0-9]*$", $data['Keyword'])) && isset($data['suburb_id'])){//search by suburb id
+			$conditions[] = "Listing.suburb_id IN (".$data['suburb_id'].")";
+		}
+		
 		
 		return $conditions;
 	}

@@ -43,9 +43,9 @@
 <div id="header-wrap">
   <div id="header">
     <div id="fast-search">
-    <form id="fast_search_form" method="post" action="/system/form.php">
-    <p><label><input type="radio" name="fs_type" value="buying/listings.php" checked="checked" /> Buy</label>
-    <label><input type="radio" name="fs_type" value="renting/rental-listings.php" /> Rent</label>
+    <form id="fast_search_form" method="post" action="">
+    <p><label><input type="radio" name="fs_type" value="Listings/index/buying" checked="checked" /> Buy</label>
+    <label><input type="radio" name="fs_type" value="Listings/index/renting" /> Rent</label>
     <input id="fsearch" name="Keyword" type="text" value="street, suburb, post code or id" />
     <input id="suburb_id" type="hidden" value="" name="suburb_id" />
     <input type="submit" class="go_btn curvy-all" value="GO" /></p>

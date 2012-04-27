@@ -11,7 +11,7 @@ $(document).ready(function(){
 			return true;
 		});
 		//fast search autocomplete
-		options = { serviceUrl: SITE_PATH+'system/fsbsearch.php',
+		options = { serviceUrl: SITE_PATH+'Listings/fastSearch',
 				minChars:3,
 				delimiter: /(,|;)\s*/, // regex or character
 				maxHeight:200,
