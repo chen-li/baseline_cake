@@ -133,6 +133,7 @@
             <!--<p><?php echo $prop_status;?></p>-->
             <div class="tools">
             	<p class="bbc"> <?php echo implode('&nbsp;&nbsp;', $bbc);?> </p>
+                <p><?php echo $lt['PCatg']['pcatg_name'];?></p>
                 <ul>
 					<!--<? if(!$staff_listings && $site_func['listing_print']['active']) {?>
                     <li class="print_prop"><label>

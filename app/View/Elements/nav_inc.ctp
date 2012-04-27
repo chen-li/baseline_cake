@@ -8,6 +8,7 @@
             <li><a href="<?php echo Router::url('/', true);?>Listings/index/land/buying">Land for Sale</a></li>
             <li><a href="<?php echo Router::url('/', true);?>Listings/index/commercial/buying">Commercial for Sale</a></li>
             <li><a href="<?php echo Router::url('/', true);?>LtInsps/inspection">Open Homes</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>Listings/auction">Auction Timetables</a></li>
             <li><a href="<?php echo Router::url('/', true);?>buying/buying-tips.php">Buying Tips</a></li>
             <!--<li><a href="<?php echo Router::url('/', true);?>buying/property-alert.php">Property Alert</a></li>-->
           </ul>

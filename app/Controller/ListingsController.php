@@ -20,7 +20,7 @@ class ListingsController extends AppController {
 				'order' => 'Listing.last_mod DESC'
 		);
 		//debug($this->params);
-		$cond = $this->searchCriteria($this->params['pass'], $this->params['named'], $this->params['data']);
+		$cond = $this->searchCriteria($this->params['data'], $this->params['pass'], $this->params['named']);
 		$lt = $this->paginate('Listing', $cond);
 		$this->getAddress($lt);
 		$this->getListingPrice($lt);
@@ -32,14 +32,24 @@ class ListingsController extends AppController {
 		$this->render('listings');
 	}
 	
+	public function auction(){
+		$data = array('auction_date'=>time());
+		$cond = array(
+			'conditions' => $this->searchCriteria($data)
+		);
+		$lt = $this->Listing->find('all', $cond);
+		$this->set('listings', $lt);
+		$this->set('bodyClass', 'inspections');
+	}
+	
 	/**
 	 * setup the search criteria
+	 * @param array $data
 	 * @param array $pass 
 	 * @param array $named
-	 * @param array $data
 	 * @return array
 	 */
-	public function searchCriteria($pass, $named, $data){
+	public function searchCriteria($data=array(), $pass=array(), $named=array()){
 		$conditions = array();
 		//check trade type if it is residential or commercial
 		if(in_array('residential', $pass)){
@@ -113,6 +123,10 @@ class ListingsController extends AppController {
 		
 		if(isset($data['suburbs']) && is_array($data['suburbs']) && sizeof($data['suburbs'])){
 			$conditions[] = "Listing.suburb_id IN (".implode(",", $data['suburbs']).")";
+		}
+		
+		if(isset($data['auction_date']) && is_numeric($data['auction_date'])){
+			$conditions[] = "unix_timestamp(Listing.auction_date) >= '".$data['auction_date']."'";
 		}
 		
 		return $conditions;
