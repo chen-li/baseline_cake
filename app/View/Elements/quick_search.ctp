@@ -16,7 +16,7 @@ $car = array(1=>"1+",2=>"2+",3=>"3+",4=>"4+",5=>"5+");
 ?>
 
 
-<form id="quick_search_form" method="post" action="/system/form.php">
+<form id="quick_search_form" method="post" action="Listings/index/buying">
 	<p class="type">
         <label><input type="radio" value="Listings/index/buying" id="buy" alt="buy" name="qs_type" checked="checked" /> Buy</label>
         <label><input type="radio" value="Listings/index/renting" id="rent" alt="rent" name="qs_type" /> Rent</label>
@@ -105,7 +105,7 @@ $car = array(1=>"1+",2=>"2+",3=>"3+",4=>"4+",5=>"5+");
     
     <p class="submit">
         <input type="submit" value="Show in a list" class="list_search_btn curvy-all" />
-        <input type="submit" value="Show on a map" name="map_view" class="map_search_btn curvy-all" />
+        <!--<input type="submit" value="Show on a map" name="map_view" class="map_search_btn curvy-all" />-->
     </p>
     
 </form>
