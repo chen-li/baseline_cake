@@ -1,6 +1,8 @@
 $(document).ready(function(){
 	if($('.form-error').length >0) {
-		$('.form-error').parent().css('color', '#c00');
+		//.children('input[type="text"], input[type="password"], .sel-box, textarea')
+		$('.form-error').parent('.sel-box').css('border', '1px solid #c00');
+		$('.form-error').parents('.input').find('label, legend').css('color', '#c00');
 		if($('.form-error').siblings('div.container').length>0) {
 			$('.form-error').siblings('div.container').css('border', '1px solid #c00');
 		}

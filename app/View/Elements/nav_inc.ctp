@@ -27,9 +27,9 @@
             <li><a href="<?php echo Router::url('/', true);?>Listings/index/commercial/renting">Commercial for Lease</a></li>
             <li><a href="<?php echo Router::url('/', true);?>Pages/guideToRenting">Guide to Renting</a></li>
             <li><a href="<?php echo Router::url('/', true);?>Offices/tenancyApplication">Tenancy Application</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>renting/request-maintenance.php">Maintenance Request</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>renting/lease-appraisal.php">Lease Appraisal</a></li>
-			<li><a href="<?php echo Router::url('/', true);?>renting/vacate-notice.php">Vacate Notice</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>FormMaintenances/form">Maintenance Request</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>FormAppraisals/form/lease">Lease Appraisal</a></li>
+			<li><a href="<?php echo Router::url('/', true);?>FormVacates/form">Vacate Notice</a></li>
           </ul>
         </li>
         <li class="useful-info"><a href="javascript:;" rel="useful-info">Resources </a>

@@ -15,13 +15,30 @@ class FormAppraisalsController extends AppController {
 	public $helpers = array('HTML', 'session', 'Form');
 
 
-	public function form(){
+	/**
+	 * the form for Market Appraisal or Lease Appraisal
+	 * @param $type
+	 * @return void
+	 */
+	public function form($type=null){
 		$this->loadModel('PCatg');
 		$catg = $this->PCatg->find('all', array('conditions'=>'PCatg.in_trade_set & POW(2,1) = POW(2,1)'));
 		$this->set('catgs', $catg);
 		$this->set('bodyClass', 'forms');
-		pr($this->request->data);
-		$this->FormAppraisal->save($this->request->data);
+		//pr($this->request->data);
+		$this->set('msg', '');
+		if ($this->request->is('post')) {    
+			if ($this->FormAppraisal->save($this->request->data)) {
+				$this->set('msg', "<p class='success_msg'>The form has been processed.</p>");
+			} else {
+				$this->set('msg', "<p class='error_msg'>The form could not be processed. Please, try again.</p>");
+			}
+		}
+		if(isset($type) && ($type=='lease')){
+			$this->render('form_lease');
+		}else{
+			$this->render('form');
+		}
 	}
 
 /**
