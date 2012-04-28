@@ -47,7 +47,7 @@
             <li><a href="<?php echo Router::url('/', true);?>Pages/careers">Careers</a></li>
           </ul>
         </li>
-        <li class="contact"><a href="<?php echo Router::url('/', true);?>contact/contact-us.php">Contact Us</a></li>
+        <li class="contact"><a href="<?php echo Router::url('/', true);?>FormContacts/contact">Contact Us</a></li>
         <!--<li class="login"><a href="<?php echo Router::url('/', true);?>buying/property-alert.php">Login</a>-->
 		</li>
       </ul>

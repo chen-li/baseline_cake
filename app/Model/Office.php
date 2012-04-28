@@ -26,4 +26,26 @@ class Office extends AppModel {
 			'order' => ''
 		)
 	);
+	
+/**
+ * belongsTo associations
+ *
+ * @var array
+ */
+	public $belongsTo = array(
+		'State' => array(
+			'className' => 'State',
+			'foreignKey' => 'state_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'Suburb' => array(
+			'className' => 'Suburb',
+			'foreignKey' => 'suburb_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+	);
 }

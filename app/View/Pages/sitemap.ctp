@@ -17,6 +17,7 @@
 	<h1>Selling</h1>
     <ul>
         <li><a href="<?php echo Router::url('/', true);?>Pages/sellingTips">Selling Tips</a></li>
+        <li><a href="<?php echo Router::url('/', true);?>FormAppraisals/form">Market Appraisal</a></li>
         <li><a href="<?php echo Router::url('/', true);?>Listings/index/buying/status:2">Recent Sales</a></li>
     </ul>
     
@@ -27,6 +28,9 @@
         <li><a href="<?php echo Router::url('/', true);?>Listings/index/commercial/renting">Commercial for Lease</a></li>
         <li><a href="<?php echo Router::url('/', true);?>Pages/guideToRenting">Guide to Renting</a></li>
         <li><a href="<?php echo Router::url('/', true);?>Offices/tenancyApplication">Tenancy Application</a></li>
+        <li><a href="<?php echo Router::url('/', true);?>FormMaintenances/form">Maintenance Request</a></li>
+        <li><a href="<?php echo Router::url('/', true);?>FormAppraisals/form/lease">Lease Appraisal</a></li>
+        <li><a href="<?php echo Router::url('/', true);?>FormVacates/form">Vacate Notice</a></li>
     </ul>
     
 	<h1>Resources</h1>
@@ -41,5 +45,10 @@
         <li><a href="<?php echo Router::url('/', true);?>Pages/companyProfile">Company Profile</a></li>
         <li><a href="<?php echo Router::url('/', true);?>Pages/testimonials">Testimonials</a></li>
         <li><a href="<?php echo Router::url('/', true);?>Pages/careers">Careers</a></li>
+    </ul>
+    
+	<h1>Contact Us</h1>
+    <ul>
+        <li><a href="<?php echo Router::url('/', true);?>FormContacts/contact">Contact Us</a></li>
     </ul>
 </div>

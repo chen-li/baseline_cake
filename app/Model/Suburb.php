@@ -24,6 +24,13 @@ class Suburb extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
+		),
+		'Office' => array(
+			'className' => 'Office',
+			'foreignKey' => 'suburb_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 	);
 }

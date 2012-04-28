@@ -24,6 +24,13 @@ class State extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
+		),
+		'Office' => array(
+			'className' => 'Office',
+			'foreignKey' => 'state_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 	);
 	

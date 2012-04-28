@@ -25,7 +25,7 @@ body.contact #content #contact-form label {
 	float:left;
 	width:120px;
 }
-body.contact #content #contact-form form p {
+body.contact #content #contact-form form div.input {
 	margin-bottom:15px;
 	min-height:22px;
 }

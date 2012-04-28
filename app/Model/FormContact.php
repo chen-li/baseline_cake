@@ -17,10 +17,25 @@ class FormContact extends AppModel {
  * @var string
  */
 	public $primaryKey = 'form_id';
-/**
- * Display field
- *
- * @var string
- */
-	public $displayField = 'name';
+	
+
+	/**
+	 * validate form elements
+	 * @var array
+	 */
+	public $validate = array(
+        'regarding' => array(
+            'rule' => 'notEmpty'
+        ),
+        'name' => array(
+            'rule' => 'notEmpty'
+        ),
+        'phone' => array(
+            'rule' => 'notEmpty'
+        ),
+        'comments' => array(
+            'rule' => 'notEmpty'
+        ),
+        'email' => 'email'
+    );
 }
