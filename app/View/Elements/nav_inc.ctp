@@ -42,7 +42,7 @@
         <li class="about"><a href="javascript:;" rel="about">About Us </a>
           <ul>
             <li><a href="<?php echo Router::url('/', true);?>Pages/companyProfile">Company Profile</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>about/our-team.php">Meet the Team</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>Members/team">Meet the Team</a></li>
             <li><a href="<?php echo Router::url('/', true);?>Pages/testimonials">Testimonials</a></li>
             <li><a href="<?php echo Router::url('/', true);?>Pages/careers">Careers</a></li>
           </ul>

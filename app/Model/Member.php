@@ -39,4 +39,19 @@ class Member extends AppModel {
 	
 	//http://devmoose.com/coding/10-awesome-cakephp-tutorials
 	//http://www.reversefolds.com/articles/show/ajax
+	
+/**
+ * belongsTo associations
+ *
+ * @var array
+ */
+	public $belongsTo = array(
+		'Office' => array(
+			'className' => 'Office',
+			'foreignKey' => 'office_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
+	);
 }

@@ -24,6 +24,13 @@ class Office extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
+		),
+		'Member' => array(
+			'className' => 'Member',
+			'foreignKey' => 'office_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 	);
 	
