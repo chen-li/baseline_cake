@@ -83,7 +83,7 @@ div.free-text ul {
 .hidden {
 	display:none !important;
 }
-.error, .required {
+.error {
 	color:#c00 !important;
 }
 .error_msg {
@@ -94,6 +94,9 @@ div.free-text ul {
 .error_msg, .success_msg {
 	line-height:20px;
 	padding:4px 4px 6px 24px;
+}
+.form-error{
+	border:1px solid #c00 !important;
 }
 .success_msg {
 	color:#333;

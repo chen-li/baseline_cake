@@ -1,8 +1,8 @@
 $(document).ready(function(){
-	if($('.error').length >0) {
-		$('.error').parent().children('input[type="text"], input[type="password"], select, .sel-box, textarea').css('border', '1px solid #c00');
-		if($('.error').siblings('div.container').length>0) {
-			$('.error').siblings('div.container').css('border', '1px solid #c00');
+	if($('.form-error').length >0) {
+		$('.form-error').parent().css('color', '#c00');
+		if($('.form-error').siblings('div.container').length>0) {
+			$('.form-error').siblings('div.container').css('border', '1px solid #c00');
 		}
 	}
 	if($('#fancyform-height').length>0) {

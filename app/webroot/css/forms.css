@@ -7,12 +7,13 @@ body.forms h2 {
 	background: -webkit-gradient(linear, left top, left bottom, from(#2e2e2e), to(#6a6a6a)); /* for webkit browsers */
 	background: -moz-linear-gradient(top,  #2e2e2e,  #6a6a6a); /* for firefox 3.6+ */
 }
-body.forms #content form p {
+body.forms #content form div.input {
 	margin-bottom:15px;
 	min-height:22px;
 	clear:both;
 }
-body.forms #content form label {
+body.forms #content form label,
+body.forms #content form legend {
 	width:180px;
 	display:block;
 	float:left;
@@ -20,9 +21,17 @@ body.forms #content form label {
 	margin:0 10px 5px 8px;
 	padding-top:2px;
 }
-body.forms #content form em span, form .required {
-	color:#CC0000;
-	font-weight:bold;
+body.forms #content form div.radio label {
+	width:30px;
+}
+body.forms #content form div.radio input {
+	float:left;
+}
+body.forms #content form div.input.submit,
+body.forms #content form div.input.reset {
+	float:left;
+	clear:none;
+	margin-right:15px;
 }
 body.forms #content form input.short {
 	width:75px;

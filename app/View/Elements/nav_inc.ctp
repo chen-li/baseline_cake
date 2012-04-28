@@ -16,7 +16,7 @@
         <li class="selling"><a href="javascript:;" rel="selling">Selling </a>
           <ul>
             <li><a href="<?php echo Router::url('/', true);?>Pages/sellingTips">Selling Tips</a></li>
-            <li><a href="<?php echo Router::url('/', true);?>selling/market-appraisal.php">Market Appraisal</a></li>
+            <li><a href="<?php echo Router::url('/', true);?>FormAppraisals/form">Market Appraisal</a></li>
             <li><a href="<?php echo Router::url('/', true);?>Listings/index/buying/status:2">Recent Sales</a></li>
           </ul>
         </li>
