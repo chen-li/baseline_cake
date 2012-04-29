@@ -130,22 +130,10 @@
                 <p class="desc"><?php echo $lt['Listing']['lt_desp'];?></p>
                 <p>Contact: <?php //echo $fullname;?> <?php //echo $contact_phone;?></p>
             </div>
-            <!--<p><?php echo $prop_status;?></p>-->
             <div class="tools">
             	<p class="bbc"> <?php echo implode('&nbsp;&nbsp;', $bbc);?> </p>
                 <p><?php echo $lt['PCatg']['pcatg_name'];?></p>
                 <ul>
-					<!--<? if(!$staff_listings && $site_func['listing_print']['active']) {?>
-                    <li class="print_prop"><label>
-                    <? if($site_func['listing_print']['selected']) {?>
-                    <span class="icon print"></span><span>Add to Print List</span> <input type="checkbox" name="prop_to_print[]" value="<?php echo $lt['lt_uid'][$i];?>" />
-                    <? }?>
-                    <? if($site_func['listing_print']['all']) {?>
-                    <input type="hidden" name="print_all[]" value="<?php echo $lt['lt_uid'][$i];?>" />
-                    <? }?>
-                    </label></li>
-                    <? }?>
-                    <li><a href="<?php echo $bookmark_link;?>" class="bookmark"><span class="icon bookmark"></span>Bookmark Property</a></li>-->
                     <li><a href="<?php echo $details_link;?>"><span class="icon view"></span>View More Details</a></li>
                 </ul>
             </div>
