@@ -23,7 +23,8 @@ body.alert #content #free-text #login {
 body.alert #content #free-text #login #login-form {
 	padding:0 2px;
 }
-body.alert #content #free-text #login #login-form p {
+body.alert #content #free-text #login #login-form p,
+body.alert #content #free-text #login #login-form div.input {
 	margin-bottom:16px;
 }
 body.alert #content #free-text #login h2 {
@@ -93,6 +94,11 @@ body.alert #content .tabs .tab-content form label+label {
 }
 body.alert #content .tabs .tab-content form p {
 	min-height:20px;
+}
+body.alert #content .tabs .tab-content form div.input{
+	min-height:20px;
+	margin-bottom:15px;
+	line-height:16px;
 }
 body.alert #content .tabs .tab-content form p.security {
 	float:left;

@@ -20,7 +20,7 @@ $(document).ready(function(){
 				deferRequestBy: 0, //miliseconds
 				noCache: true, //default is false, set to true to disable caching
 				// callback function:
-				onSelect: function(value, data){ $('#suburb_id').val(data); }
+				onSelect: function(value, data){ $('#fsuburb_id').val(data); }
 		};
 		$('#fsearch').autocomplete(options);
 	}

@@ -24,14 +24,14 @@ $(document).ready(function(){
 	//suburbs
 	if($('#Suburb').length>0) {
 		var option = {
-			serviceUrl:'/system/sbsearch.php',
+			serviceUrl: SITE_PATH+'Suburbs/fastSearch',
 			minChars:3, 
 			maxHeight:200,
 			width:250,
 			deferRequestBy: 1, //miliseconds
 			noCache: true, //default is false, set to true to disable caching
 			// callback function:
-			onSelect: function(value, data){ $('#f_SuburbId').val(data); }
+			onSelect: function(value, data){ $('#suburb_id').val(data); }
 		};
 		$('#Suburb').autocomplete(option);
 	}

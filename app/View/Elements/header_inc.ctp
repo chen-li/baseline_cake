@@ -47,7 +47,7 @@
     <p><label><input type="radio" name="fs_type" value="Listings/index/buying" checked="checked" /> Buy</label>
     <label><input type="radio" name="fs_type" value="Listings/index/renting" /> Rent</label>
     <input id="fsearch" name="Keyword" type="text" value="street, suburb, post code or id" />
-    <input id="suburb_id" type="hidden" value="" name="suburb_id" />
+    <input id="fsuburb_id" type="hidden" value="" name="suburb_id" />
     <input type="submit" class="go_btn curvy-all" value="GO" /></p>
 </form>    </div>
     <div id="header-logo">

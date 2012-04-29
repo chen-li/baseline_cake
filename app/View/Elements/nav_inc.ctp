@@ -10,7 +10,7 @@
             <li><a href="<?php echo Router::url('/', true);?>LtInsps/inspection">Open Homes</a></li>
             <li><a href="<?php echo Router::url('/', true);?>Listings/auction">Auction Timetables</a></li>
             <li><a href="<?php echo Router::url('/', true);?>Pages/buyingTips">Buying Tips</a></li>
-            <!--<li><a href="<?php echo Router::url('/', true);?>buying/property-alert.php">Property Alert</a></li>-->
+            <li><a href="<?php echo Router::url('/', true);?>Contacts/propertyAlert">Property Alert</a></li>
           </ul>
         </li>
         <li class="selling"><a href="javascript:;" rel="selling">Selling </a>
@@ -48,6 +48,11 @@
           </ul>
         </li>
         <li class="contact"><a href="<?php echo Router::url('/', true);?>FormContacts/contact">Contact Us</a></li>
-        <!--<li class="login"><a href="<?php echo Router::url('/', true);?>buying/property-alert.php">Login</a>-->
+        <li class="login">
+        <?php if($this->Session->read('logged_in')):?>
+        	<a href="<?php echo Router::url('/', true);?>Contacts/logout" class="off">Log Out</a>
+        <?php else:?>
+        	<a href="<?php echo Router::url('/', true);?>Contacts/propertyAlert">Login</a>
+        <?php endif;?>
 		</li>
       </ul>
