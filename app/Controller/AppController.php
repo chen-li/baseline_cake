@@ -33,7 +33,10 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 	
-    public function afterRender() {
-        $this->Session->write('referer_url', $this->here);
+    public function beforeFilter() {
+    	$str = ucwords($this->params->params['action']);
+		preg_match_all('/[A-Z][^A-Z]*/', $str, $results);
+		$result = implode(' ', $results[0]);
+		$this->set('title_for_layout', $result.' | NSW Properties - search here for current Sutherland Shire Rental Properties ');
     }
 }

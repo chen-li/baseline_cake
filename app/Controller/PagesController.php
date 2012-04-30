@@ -85,7 +85,6 @@ class PagesController extends AppController {
 	 * @return void
 	 */
 	public function initialization(){
-		$this->set('title_for_layout', 'NSW Properties For Lease - search here for current Sutherland Shire Rental Properties');
 		$this->loadModel('Listing');
 		$condition = array(
 			'conditions' => array(

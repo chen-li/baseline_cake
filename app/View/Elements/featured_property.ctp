@@ -8,7 +8,7 @@
 		foreach($featureProperties as $feat):
 			$cnt++;
 	?>
-        <li id="fp_<?php echo $cnt;?>"> <a href=""><img src="<?php echo $feat['Listing']['photo_path'];?>" alt="<?php echo $feat['Listing']['web_address'];?>" /></a>
+        <li id="fp_<?php echo $cnt;?>"> <a href="<?php echo Router::url('/', true).'Listings/details/'.$feat['Listing']['lt_uid'];?>"><img src="<?php echo $feat['Listing']['photo_path'];?>" alt="<?php echo $feat['Listing']['web_address'];?>" /></a>
         <div>
         <p class="headline" title="<?php echo $feat['Listing']['lt_headline'];?>"><?php echo $feat['Listing']['lt_headline'];?></p>
         <p><strong>Featured:</strong> <?php echo $feat['Listing']['web_address'];?></p>
