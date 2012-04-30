@@ -8,7 +8,7 @@
 <div class="tabs">
 <h2>My Property Alert</h2>
 <ul>
-	<!--<li><a href="<?php echo Router::url('/', true).'Contacts/myAlert/myProperties';?>" class="on">My Properties</a></li>-->
-	<li><a href="<?php echo Router::url('/', true).'Contacts/myAlert/mydetails';?>" class="on">My Details</a></li>
-	<li><a href="<?php echo Router::url('/', true).'Contacts/logout';?>" class="off">Log Out</a></li>
+	<li><a href="<?php echo Router::url('/', true).'Contacts/myAlert/myProperties';?>" class="<?php echo $switch[0];?>">My Properties</a></li>
+	<li><a href="<?php echo Router::url('/', true).'Contacts/myAlert/mydetails';?>" class="<?php echo $switch[1];?>">My Details</a></li>
+	<li><a href="<?php echo Router::url('/', true).'Contacts/logout';?>" class="<?php echo $switch[2];?>">Log Out</a></li>
 </ul>

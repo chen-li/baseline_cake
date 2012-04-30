@@ -118,6 +118,22 @@ class Listing extends AppModel {
 				'finderQuery' => '',
 				'deleteQuery' => '',
 				'insertQuery' => ''
-			)
+			),
+		/*'Contact' =>
+			array(
+				'className' => 'Contact',
+				'joinTable' => 'c_bookmark',
+				'foreignKey' => 'cid',
+				'associationForeignKey' => 'lt_id',
+				//'unique' => true,
+				'conditions' => '',
+				'fields' => '',
+				'order' => '',
+				'limit' => '',
+				'offset' => '',
+				'finderQuery' => '',
+				'deleteQuery' => '',
+				'insertQuery' => ''
+			)*/
 	);
 }

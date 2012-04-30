@@ -3,4 +3,8 @@
 
 <?php echo $this->element('reg_user_header'); ?>
 
+<?php if($switch[1]=='on'):?>
 <?php echo $this->element('reg_edit'); ?>
+<?php else:?>
+<?php echo $this->element('reg_list'); ?>
+<?php endif;?>

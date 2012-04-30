@@ -17,6 +17,31 @@ class Contact extends AppModel {
  * @var string
  */
 	public $displayField = 'title';
+	
+/**
+ * hasAndBelongsToMany associations
+ *
+ * @var array
+ */
+	
+	public $hasAndBelongsToMany = array(
+		'Listing' =>
+			array(
+				'className' => 'Listing',
+				'joinTable' => 'c_bookmark',
+				'foreignKey' => 'cid',
+				'associationForeignKey' => 'lt_id',
+				'unique' => true,
+				'conditions' => '',
+				'fields' => '',
+				'order' => '',
+				'limit' => '',
+				'offset' => '',
+				'finderQuery' => '',
+				'deleteQuery' => '',
+				'insertQuery' => ''
+			)
+	);
     
 	/**
 	 * validate the form elements without saving to the database

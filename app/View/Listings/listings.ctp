@@ -134,6 +134,7 @@
             	<p class="bbc"> <?php echo implode('&nbsp;&nbsp;', $bbc);?> </p>
                 <p><?php echo $lt['PCatg']['pcatg_name'];?></p>
                 <ul>
+                	<li><a href="<?php echo Router::url('/', true);?>Contacts/bookmark/<?php echo $lt['Listing']['lt_id']?>" class="bookmark"><span class="icon bookmark"></span>Bookmark Property</a></li>
                     <li><a href="<?php echo $details_link;?>"><span class="icon view"></span>View More Details</a></li>
                 </ul>
             </div>

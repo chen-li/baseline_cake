@@ -5,6 +5,10 @@ $(document).ready(function(){
 		'scrolling':'no',
 		'centerOnScroll':true
 	});*/
+	$("a.bookmark").fancybox({
+		'scrolling':'no',
+		'centerOnScroll':true
+	});
 	if($('#refine-search').length>0 && $('.tab-container').length>0) {
 		callback($('.tab-container:eq(0)'));
 		if(enable_abajax) {

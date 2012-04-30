@@ -67,9 +67,10 @@ class ContactsController extends AppController {
 	 * @param string $step
 	 * @return void
 	 */
-	public function myAlert($step='mydetails'){
+	public function myAlert($step='myProperties'){
 		$this->loadModel('Contact');
 		$this->checkPermission();
+		$switch = array('off', 'off', 'off');
 
 		$this->set('msg2', '');
 		if($step=='mydetails'){
@@ -78,9 +79,16 @@ class ContactsController extends AppController {
 				'conditions'=>"Contact.cid = '".$this->Session->read('cid')."'"
 			));
 			$this->set('contact', $contact);
+			$switch[1] = 'on';
+			$this->set('switch', $switch);
 		}else{
 			//if go to the myproperty section
-			
+			$contact = $this->Contact->find('first', array(
+				'conditions'=>"Contact.cid = '".$this->Session->read('cid')."'"
+			));
+			$this->set('contact', $contact);
+			$switch[0] = 'on';
+			$this->set('switch', $switch);
 		}
 
 		//if edit a contact
@@ -152,11 +160,55 @@ class ContactsController extends AppController {
 			}
 	}
 	
+	/**
+	 * the Forget Password page
+	 * @return void
+	 */
 	public function forgetPassword(){
 		if(isset($this->data['email'])){
 			$this->Session->setFlash("<p class='error_msg'>Please fill in your email address</p>");
 		}
 		$this->render('forget_password', 'ajax');
+	}
+	
+	/**
+	 * delete a bookmarked property
+	 * @return void
+	 */
+	public function deleteProperty($id){
+		$this->loadModel('CBookmark');
+		if ($this->request->is('get')) {
+			throw new MethodNotAllowedException();
+		}
+		$this->checkPermission();
+		$bookmark = $this->CBookmark->find('first', array(
+			'conditions' => array(
+				'CBookmark.cid = '.$this->Session->read('cid'),
+				'CBookmark.lt_id = '.$id
+			)
+		));
+		if (sizeof($bookmark['CBookmark']) && $this->CBookmark->delete($bookmark['CBookmark']['id'])) {
+			$this->Session->setFlash('the Property deleted');
+			$this->redirect($this->referer());
+		}
+	}
+	
+	/**
+	 * bookmark a property
+	 * @return void
+	 */
+	public function bookmark($lt_id){
+		$this->loadModel('CBookmark');
+		$this->CBookmark->set(array(
+		    'cid' => $this->Session->read('cid'),
+		    'lt_id' => $lt_id
+		));
+		if($this->CBookmark->save()){
+			$this->set('isBookmarked',true);
+		}else{
+			$this->set('isBookmarked',false);
+		}
+		$this->render('bookmark', 'ajax');
 	}
 
 }
