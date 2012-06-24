@@ -35,7 +35,7 @@
 </head>
 
 <body class="<?php echo $bodyClass;?>">
-<?php echo $this->element('sql_dump'); ?>
+<?php //echo $this->element('sql_dump'); ?>
 <input type="hidden" id="folder_name" value="" />
 <input type="hidden" id="request_uri" value="index.php" />
 <div id="wrapper">
